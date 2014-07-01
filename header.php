@@ -1,10 +1,7 @@
 <!doctype html>
-
 <?php 
     $directory = get_bloginfo("template_directory");
 ?>
-
-
 <html class="no-js" <?php language_attributes(); ?>>
     <head>
         <!-- Document settings and metadata -->

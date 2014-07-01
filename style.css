@@ -1,12 +1,191 @@
 /*
-	Theme Name: Cornerstone
-	Author: Hayden Bleasel
-	Author URI: http://www.haydenbleasel.com/
-	Version: 1.0
+    Theme Name: Cornerstone
+    Theme URI: http://github.com/haydenbarnett/cornerstone
+    Description: A lightweight, no-nonsense starter kit for Wordpress developers
+    Version: 1.1
+    Author: Hayden Barnett
+    Author URI: http://www.haydenbarnett.com/
+    Tags: Cornerstone, Starter, HTML5, CSS3
+
+    License: MIT
+    License URI: http://opensource.org/licenses/mit-license.php
 */
 
-* {
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+*,*:after,*:before  {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+    color: #333;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom:1;
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+header {
+
+}
+
+.branding {
+
+}
+
+.nav {
+
+}
+
+#content {
+
+}
+
+#content-inner {
+
+}
+
+.entry-header {
+
+}
+
+.entry-content {
+
+}
+
+footer {
+
+}
+
+.legal {
+    
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+       only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+    * {
+        background:transparent !important;
+        color:#000 !important;
+        box-shadow:none !important;
+        text-shadow:none !important;
+    }
+    a,
+    a:visited {
+        text-decoration:underline;
+    }
+    a[href]:after {
+        content:" (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content:" (" attr(title) ")";
+    }
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content:"";
+    }
+    pre,blockquote {
+        border:1px solid #999;
+        page-break-inside:avoid;
+    }
+    thead {
+        display:table-header-group;
+    }
+    tr,img {
+        page-break-inside:avoid;
+    }
+    img {
+        max-width:100% !important;
+    }
+    @page {
+        margin:0.5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans:3;
+        widows:3;
+    }
+    h2,
+    h3 {
+        page-break-after:avoid;
+    }
 }

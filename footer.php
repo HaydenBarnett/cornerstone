@@ -1,7 +1,9 @@
             </div>
 
             <footer id="footer">
-                <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
+                <div class="legal">
+                    <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
+                </div>
             </footer>
 
         </div>
