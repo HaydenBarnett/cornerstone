@@ -73,12 +73,13 @@
 
         <div class="wrapper">
 
-            <header>
+            <header id="header">
 
                 <div class="branding">
                     <a href="<?php echo home_url(); ?>">
-                        <?php echo get_bloginfo("name"); ?>
+                        <h1><?php bloginfo("name"); ?></h1>
                     </a>
+                    <p><?php bloginfo("description"); ?></p>
                 </div>
 
                 <nav class="nav">
@@ -86,3 +87,5 @@
                 </nav>
 
             </header>
+
+            <div id="content">
