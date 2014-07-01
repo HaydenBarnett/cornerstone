@@ -25,7 +25,7 @@
         <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?>" />
         <meta property="og:url" content="<?php bloginfo("url") ?>" />
         <meta property="og:description" content="<?php bloginfo("description"); ?>" />
-        <meta property="og:image" content="<?php echo $directory; ?>/assets/images/open-graph.png" />
+        <meta property="og:image" content="<?php echo $directory; ?>/img/open-graph.png" />
         <meta property="og:locale" content="en_US" />
 
         <!-- iOS, Android and Windows -->
@@ -38,7 +38,7 @@
         <link rel="icon" sizes="196x196" href="" />
         <link rel="shortcut icon" href="favicon.ico" />
         <link rel="apple-touch-icon" href="" />
-        <link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-precomposed.png" />
+        <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png" />
         <meta name="msapplication-TileImage" content="" />
         <meta name="msapplication-TileColor" content="" />
 
@@ -50,13 +50,13 @@
         <link rel="prev" href="" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="<?php echo $directory; ?>/assets/css/normalize.css" />
+        <link rel="stylesheet" href="<?php echo $directory; ?>/css/normalize.css" />
         <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
 
         <!-- JS -->
-        <script src="<?php echo $directory; ?>/assets/js/fastclick.js"></script>
-        <script src="<?php echo $directory; ?>/assets/js/respond.js"></script>
-        <script src="<?php echo $directory; ?>/assets/js/html5shiv.js"></script>
+        <script src="<?php echo $directory; ?>/js/fastclick.js"></script>
+        <script src="<?php echo $directory; ?>/js/respond.js"></script>
+        <script src="<?php echo $directory; ?>/js/html5shiv.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
