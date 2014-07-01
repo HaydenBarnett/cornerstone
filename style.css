@@ -1,0 +1,12 @@
+/*
+	Theme Name: Cornerstone
+	Author: Hayden Bleasel
+	Author URI: http://www.haydenbleasel.com/
+	Version: 1.0
+*/
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
