@@ -16,15 +16,9 @@
         <meta name="rating" content="general" />
         <meta name="keywords" content="" />
 
-        <!-- Robots and Viewport -->
+        <!-- Viewport -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <?php
-            if (is_search())
-                echo "<meta name=\"robots\" content=\"noindex, nofollow\" />";
-            else
-                echo "<meta name=\"robots\" content=\"index, follow\" />";
-        ?>
 
         <!-- OpenGraph for Facebook -->
         <meta property="og:type" content="website" />
