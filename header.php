@@ -80,7 +80,7 @@
                 </div>
 
                 <nav class="nav">
-                    
+                    <?php cornerstone_nav(); ?>
                 </nav>
 
             </header>
