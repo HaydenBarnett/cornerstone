@@ -54,9 +54,9 @@
         <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
 
         <!-- JS -->
-        <script src="<?php echo $directory; ?>/assets/js/modernizr.js"></script>
-        <script src="<?php echo $directory; ?>/assets/js/prefix-free.js"></script>
+        <script src="<?php echo $directory; ?>/assets/js/fastclick.js"></script>
         <script src="<?php echo $directory; ?>/assets/js/respond.js"></script>
+        <script src="<?php echo $directory; ?>/assets/js/html5shiv.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
