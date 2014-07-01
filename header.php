@@ -50,7 +50,7 @@
         <link rel="prev" href="" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="<?php echo $directory; ?>/assets/css/reset.css" />
+        <link rel="stylesheet" href="<?php echo $directory; ?>/assets/css/normalize.css" />
         <link rel="stylesheet" href="<?php echo $directory; ?>/assets/css/fonts.css" />
         <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
         <link rel="stylesheet" href="<?php echo $directory; ?>/assets/css/responsive.css" />
