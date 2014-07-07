@@ -47,7 +47,6 @@
         <link rel="prev" href="" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="<?php echo $directory; ?>/css/normalize.css" />
         <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
 
         <!-- JS -->
