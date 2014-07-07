@@ -38,6 +38,16 @@
 }
 
 /*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+@color-background: #f0f0f0;
+@color-foreground: #fff;
+@color-border: #ccc;
+@color-text: #333;
+@color-headings: #333;
+
+/*------------------------------------*\
     MAIN
 \*------------------------------------*/
 
@@ -48,27 +58,24 @@
 }
 
 html {
-
+    overflow-y: scroll;
 }
 
 body {
-    color: #333;
+    color: @color-text;
+    background: @color-background;
 }
 
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid @color-border;
     margin: 1em 0;
     padding: 0;
 }
 
-audio,
-canvas,
-img,
-svg,
-video {
+audio, canvas, img, svg, video {
     vertical-align: middle;
 }
 
@@ -94,45 +101,58 @@ textarea {
     *zoom:1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: @color-headings;
+}
 
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
 
+
+.wrapper {
+    padding: 20px;
+}
+
 header {
+    .branding {
 
-}
-
-.branding {
-
-}
-
-.nav {
-
+    }
+    .nav {
+        .menu {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #content {
+    background: @color-foreground;
+    #content-inner {
+        padding: 10px 20px;
+        .entry-header {
 
-}
+        }
+        .entry-content {
 
-#content-inner {
-
-}
-
-.entry-header {
-
-}
-
-.entry-content {
-
+        }
+    }
 }
 
 footer {
-
-}
-
-.legal {
-    
+    .legal {
+        text-align: center;
+    }
 }
 
 /*------------------------------------*\
