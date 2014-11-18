@@ -1,11 +1,8 @@
 <!doctype html>
-<?php 
-    $directory = get_bloginfo("template_directory");
-?>
 <html class="no-js" <?php language_attributes(); ?>>
     <head>
         <!-- Document settings and metadata -->
-        <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+        <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' - '; } ?> <?php bloginfo('name'); ?></title>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="description" content="<?php bloginfo("description"); ?>" />
         <meta name="author" content="<?php bloginfo("name"); ?>" />
@@ -14,15 +11,14 @@
         <meta name="keywords" content="" />
 
         <!-- Viewport -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <!-- OpenGraph for Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?>" />
+        <meta property="og:title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' - '; } ?> <?php bloginfo('name'); ?>" />
         <meta property="og:url" content="<?php bloginfo("url") ?>" />
         <meta property="og:description" content="<?php bloginfo("description"); ?>" />
-        <meta property="og:image" content="<?php echo $directory; ?>/img/open-graph.png" />
+        <meta property="og:image" content="<?php bloginfo("template_directory") ?>/img/open-graph.png" />
         <meta property="og:locale" content="en_US" />
 
         <!-- iOS, Android and Windows -->
@@ -50,9 +46,9 @@
         <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
 
         <!-- JS -->
-        <script src="<?php echo $directory; ?>/js/fastclick.js"></script>
-        <script src="<?php echo $directory; ?>/js/respond.js"></script>
-        <script src="<?php echo $directory; ?>/js/html5shiv.js"></script>
+        <!--[if lt IE 9]>
+            <script src="<?php bloginfo("template_directory") ?>/js/html5shiv.js"></script>
+        <![endif]-->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -71,16 +67,20 @@
 
             <header>
 
-                <div class="branding">
-                    <a href="<?php echo home_url(); ?>">
-                        <h1><?php bloginfo("name"); ?></h1>
-                    </a>
-                    <p><?php bloginfo("description"); ?></p>
-                </div>
+                <div class="container">
 
-                <nav class="nav">
-                    <?php cornerstone_nav(); ?>
-                </nav>
+                    <div class="branding">
+                        <a href="<?php echo home_url(); ?>">
+                            <h1><?php bloginfo("name"); ?></h1>
+                        </a>
+                        <p><?php bloginfo("description"); ?></p>
+                    </div>
+
+                    <nav class="nav">
+                        <?php cornerstone_nav(); ?>
+                    </nav>
+
+                </div>
 
             </header>
 
