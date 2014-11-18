@@ -1,4 +1,4 @@
-cornerstone
+Cornerstone
 ===========
 
-A lightweight, no-nonsense starter kit for Wordpress developers.
+A lightweight starter kit for Wordpress developers.
