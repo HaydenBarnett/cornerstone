@@ -1,21 +1,21 @@
 /*!
     Theme Name: Cornerstone
     Theme URI: http://github.com/haydenbarnett/cornerstone
-    Description: A lightweight, no-nonsense starter kit for Wordpress developers
+    Description: A lightweight starter kit for Wordpress developers
     Version: 1.1
     Author: Hayden Barnett
     Author URI: http://www.haydenbarnett.com/
     Tags: Cornerstone, Starter, HTML5, CSS3
 
-    License: MIT
-    License URI: http://opensource.org/licenses/mit-license.php
+    License: 
+    License URI: 
 */
 
 @import (less) "css/normalize.css";
 
-/*------------------------------------*\
-    MIXINS
-\*------------------------------------*/
+/* --------------------------------------------------------------
+   Mixins
+   -------------------------------------------------------------- */
 
 .transition (@transition) {
     -webkit-transition: @transition;  
@@ -37,19 +37,20 @@
     opacity:            @opacity;
 }
 
-/*------------------------------------*\
-    VARIABLES
-\*------------------------------------*/
+/* --------------------------------------------------------------
+   Variables
+   -------------------------------------------------------------- */
 
 @color-background: #f0f0f0;
 @color-foreground: #fff;
 @color-border: #ccc;
+@color-heading: #333;
 @color-text: #333;
-@color-headings: #333;
+@color-highlight: #3498db;
 
-/*------------------------------------*\
-    MAIN
-\*------------------------------------*/
+/* --------------------------------------------------------------
+   Main
+   -------------------------------------------------------------- */
 
 *, *:after, *:before  {
     -moz-box-sizing: border-box;
@@ -58,12 +59,14 @@
 }
 
 html {
+    color: @color-text;
+    font-size: 1em;
+    line-height: 1.4;
     overflow-y: scroll;
 }
 
 body {
-    color: @color-text;
-    background: @color-background;
+    background-color: @color-background;
 }
 
 hr {
@@ -75,7 +78,12 @@ hr {
     padding: 0;
 }
 
-audio, canvas, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
     vertical-align: middle;
 }
 
@@ -89,6 +97,29 @@ textarea {
     resize: vertical;
 }
 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    color: @color-heading;
+}
+
+a, 
+a:visited {
+    color: @color-highlight;
+}
+a:hover, 
+a:focus,
+a:active {
+    color: lighten(@color-highlight, 20%);
+}
+
+/* --------------------------------------------------------------
+   Utilities
+   -------------------------------------------------------------- */
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -101,14 +132,27 @@ textarea {
     *zoom:1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: @color-headings;
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 
-/*------------------------------------*\
-    STRUCTURE
-\*------------------------------------*/
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
 
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------
+   Structure
+   -------------------------------------------------------------- */
 
 .wrapper {
     padding: 20px;
@@ -138,6 +182,7 @@ header {
 
 #content {
     background: @color-foreground;
+
     #content-inner {
         padding: 10px 20px;
         .entry-header {
@@ -147,6 +192,7 @@ header {
 
         }
     }
+
 }
 
 footer {
@@ -155,29 +201,111 @@ footer {
     }
 }
 
-/*------------------------------------*\
-    RESPONSIVE
-\*------------------------------------*/
+/* --------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------- */
 
-@media only screen and (min-width:320px) {
-
-}
-@media only screen and (min-width:480px) {
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
 
 }
-@media only screen and (min-width:768px) {
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
 
 }
-@media only screen and (min-width:1024px) {
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
 
 }
-@media only screen and (min-width:1140px) {
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
 
 }
-@media only screen and (min-width:1280px) {
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
 
 }
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-       only screen and (min-resolution:144dpi) {
 
+/* Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+}
+
+/* --------------------------------------------------------------
+   Print
+   -------------------------------------------------------------- */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }

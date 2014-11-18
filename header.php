@@ -69,7 +69,7 @@
 
         <div class="wrapper">
 
-            <header id="header">
+            <header>
 
                 <div class="branding">
                     <a href="<?php echo home_url(); ?>">

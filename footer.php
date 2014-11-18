@@ -1,6 +1,6 @@
             </div>
 
-            <footer id="footer">
+            <footer>
                 <div class="legal">
                     <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
                 </div>
