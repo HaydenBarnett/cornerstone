@@ -1,7 +1,7 @@
 /*jslint browser:true*/
-/*global $, FastClick*/
+/*global $*/
 
 $(function () {
     'use strict';
-    FastClick.attach(document.body);
+    
 });
