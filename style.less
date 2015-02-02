@@ -2,16 +2,17 @@
     Theme Name: Cornerstone
     Theme URI: http://github.com/haydenbarnett/cornerstone
     Description: A lightweight starter kit for Wordpress developers
-    Version: 1.1
+    Version: 1.0
     Author: Hayden Barnett
     Author URI: http://www.haydenbarnett.com/
-    Tags: Cornerstone, Starter, HTML5, CSS3
+    Tags: 
 
     License: 
     License URI: 
 */
 
-@import (less) "css/normalize.css";
+@import (less) "css/normalize.less";
+@import (less) "css/basics.less";
 
 /* --------------------------------------------------------------
    Mixins
@@ -31,42 +32,28 @@
     -o-transition:      @transition, @transition2; 
     transition:         @transition, @transition2; 
 }
-.opacity (@opacity: 0.5) {
-    -webkit-opacity:    @opacity;
-    -moz-opacity:       @opacity;
-    opacity:            @opacity;
-}
 
 /* --------------------------------------------------------------
    Variables
    -------------------------------------------------------------- */
 
-@color-background: #f0f0f0;
-@color-foreground: #fff;
+@color-black: #333;
+@color-white: #fff;
 @color-border: #ccc;
-@color-heading: #333;
-@color-text: #333;
 @color-highlight: #3498db;
 
 /* --------------------------------------------------------------
    Main
    -------------------------------------------------------------- */
 
-*, *:after, *:before  {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 html {
-    color: @color-text;
+    color: @color-black;
     font-size: 1em;
     line-height: 1.4;
-    overflow-y: scroll;
 }
 
 body {
-    background-color: @color-background;
+    background-color: @color-white;
 }
 
 hr {
@@ -103,7 +90,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    color: @color-heading;
+    color: @color-black;
     margin: 0;
     padding-top: 20px;
 }
@@ -117,40 +104,6 @@ a:hover,
 a:focus,
 a:active {
     color: lighten(@color-highlight, 20%);
-}
-
-/* --------------------------------------------------------------
-   Utilities
-   -------------------------------------------------------------- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear: both;
-}
-.clearfix {
-    *zoom:1;
-}
-
-.alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-}
-
-.alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-}
-
-.aligncenter {
-    clear: both;
-    display: block;
-    margin: 0 auto;
 }
 
 /* --------------------------------------------------------------
@@ -190,7 +143,7 @@ header {
 }
 
 #content {
-    background: @color-foreground;
+    
 }
 
 #content-inner {
@@ -239,79 +192,4 @@ footer {
 /* Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
-}
-
-/* --------------------------------------------------------------
-   Print
-   -------------------------------------------------------------- */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
