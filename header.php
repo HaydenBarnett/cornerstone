@@ -2,7 +2,6 @@
 <html class="no-js" <?php language_attributes(); ?>>
     <head>
         <!-- Document settings and metadata -->
-        <title><?php wp_title( '-', true, 'right' ); ?></title>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="description" content="<?php bloginfo("description"); ?>" />
         <meta name="author" content="<?php bloginfo("name"); ?>" />

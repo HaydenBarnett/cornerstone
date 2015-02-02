@@ -46,6 +46,7 @@
 	function cornerstone_after_setup_theme() {
 		register_nav_menu('primary', __( 'Navigation Menu', 'cornerstone'));
 		add_theme_support('post-thumbnails');
+        add_theme_support('title-tag');
 	} add_action('after_setup_theme', 'cornerstone_after_setup_theme');
 
 	function cornerstone_init() {
