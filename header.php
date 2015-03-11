@@ -2,14 +2,14 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
-        <meta name="description" content="<?php bloginfo("description"); ?>" />
-        <meta name="author" content="<?php bloginfo("name"); ?>" />
-        <meta name="designer" content="<?php bloginfo("name"); ?>" />
-        <meta name="rating" content="general" />
+        <meta name="description" content="<?php bloginfo("description"); ?>">
+        <meta name="author" content="<?php bloginfo("name"); ?>">
+        <meta name="designer" content="<?php bloginfo("name"); ?>">
+        <meta name="rating" content="general">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" />
+        <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>">
 
         <!--[if lt IE 9]>
             <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/html5shiv.js"></script>
