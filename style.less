@@ -25,7 +25,8 @@
     -o-transition:      @transition;
     transition:         @transition; 
 }
-.transition (@transition, @transition2) {
+
+.transition2 (@transition, @transition2) {
     -webkit-transition: @transition, @transition2;  
     -moz-transition:    @transition, @transition2; 
     -ms-transition:     @transition, @transition2; 
@@ -40,7 +41,7 @@
 @color-black: #333;
 @color-white: #fff;
 @color-border: #ccc;
-@color-highlight: #3498db;
+@color-primary: #3498db;
 
 /* --------------------------------------------------------------
    Main
@@ -48,8 +49,6 @@
 
 html {
     color: @color-black;
-    font-size: 1em;
-    line-height: 1.4;
 }
 
 body {
@@ -97,13 +96,13 @@ h6 {
 
 a, 
 a:visited {
-    color: @color-highlight;
+    color: @color-primary;
     text-decoration: none;
 }
 a:hover, 
 a:focus,
 a:active {
-    color: lighten(@color-highlight, 20%);
+    color: lighten(@color-primary, 20%);
 }
 
 /* --------------------------------------------------------------
