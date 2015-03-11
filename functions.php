@@ -36,6 +36,15 @@
         ));
 	} add_action('after_setup_theme', 'cornerstone_after_setup_theme');
 
+
+
+    function dequeue_jquery_migrate(&$scripts){
+        if(!is_admin()){
+            $scripts->remove('jquery');
+            $scripts->add('jquery', false, array( 'jquery-core' ));
+        }
+    } add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
+
     function cornerstone_scripts() {
         $theme_name = 'cornerstone';
         $theme_data = get_theme_data(get_theme_root().'/'.$theme_name.'/style.css');
