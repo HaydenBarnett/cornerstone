@@ -29,13 +29,12 @@
 
 <div id="wrapper">
 
-    <header>
+    <header class="clearfix">
 
         <div class="container">
 
             <div class="branding">
                 <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo("name"); ?></a></h1>
-                <p><?php bloginfo("description"); ?></p>
             </div>
 
             <nav>
