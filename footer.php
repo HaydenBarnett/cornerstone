@@ -1,14 +1,15 @@
-            </div>
+    
+    </div><!-- #content -->
 
-            <footer>
-                <div class="container">
-                    <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
-                </div>
-            </footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
         </div>
+    </footer>
 
-		<?php wp_footer(); ?>
+</div><!-- #wrapper -->
 
-	</body>
+<?php wp_footer(); ?>
+
+</body>
 </html>
