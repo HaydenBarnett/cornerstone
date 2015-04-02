@@ -61,6 +61,14 @@
         </style>
     <?php } add_action('wp_before_admin_bar_render', 'cornerstone_remove_admin_logo', 0);
 
+
+    //  Remove unused wordpress interface items
+    
+    function remove_menus() {
+        remove_menu_page( 'edit-comments.php' );      // Comments
+        remove_menu_page( 'tools.php' );              // Tools
+    } add_action( 'admin_menu', 'remove_menus' );
+
     
     // Setup Theme
 
