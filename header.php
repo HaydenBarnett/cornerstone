@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="description" content="<?php bloginfo("description"); ?>">
     <meta name="author" content="<?php bloginfo("name"); ?>">
     <meta name="designer" content="<?php bloginfo("name"); ?>">
     <meta name="rating" content="general">

@@ -1,4 +1,4 @@
 Cornerstone
 ===========
 
-A lightweight starter kit for Wordpress developers.
+A lightweight starter theme for Wordpress developers.
