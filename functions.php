@@ -25,17 +25,41 @@
         );
     }
 
+
+    function cornerstone_login_logo() { 
+        ?> <style type="text/css"> .login h1 a {
+                background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
+        } </style>
+    <?php } add_action( 'login_enqueue_scripts', 'cornerstone_login_logo' );
+
+
+    function cornerstone_logo_url() {
+        return home_url();
+    } add_filter( 'login_headerurl', 'cornerstone_logo_url' );
+
+
+    function cornerstone_logo_title() {
+        return get_bloginfo("name");
+    } add_filter( 'login_headertitle', 'cornerstone_logo_title' );
+
+
+    function no_wp_logo_admin_bar_remove() { 
+        ?> <style type="text/css"> #wpadminbar #wp-admin-bar-wp-logo, #footer-thankyou {
+                display: none;
+        } </style>
+    <?php } add_action('wp_before_admin_bar_render', 'no_wp_logo_admin_bar_remove', 0);
+
+
 	function cornerstone_after_setup_theme() {
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         register_nav_menus(array(
-            'primary' => __( 'Primary Menu',      'cornerstone' )
+            'primary' => __( 'Primary Menu', 'cornerstone' )
         ));
         add_theme_support('html5', array(
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ));
 	} add_action('after_setup_theme', 'cornerstone_after_setup_theme');
-
 
 
     function dequeue_jquery_migrate(&$scripts){
@@ -45,6 +69,7 @@
         }
     } add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
 
+
     function cornerstone_scripts() {
         $theme_name = 'cornerstone';
         $theme_data = get_theme_data(get_theme_root().'/'.$theme_name.'/style.css');
@@ -53,10 +78,12 @@
         wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $theme_version, true);
     } add_action( 'wp_enqueue_scripts', 'cornerstone_scripts' );
 
+
 	function cornerstone_init() {
 		remove_action('wp_head', 'rsd_link');
 		remove_action('wp_head', 'wlwmanifest_link');
 		remove_action('wp_head', 'wp_generator');
 	} add_action('init', 'cornerstone_init');
+
 
 ?>
