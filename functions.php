@@ -90,8 +90,8 @@
 
     function cornerstone_scripts() {
         $theme_name = 'cornerstone';
-        $theme_data = get_theme_data(get_theme_root().'/'.$theme_name.'/style.css');
-        $theme_version = $theme_data['Version'];
+        $theme_data = wp_get_theme();
+        $theme_version = $theme_data->get('Version');
         wp_enqueue_style('stylesheet', get_stylesheet_uri(), null, $theme_version);
         wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), $theme_version, true);
     } add_action( 'wp_enqueue_scripts', 'cornerstone_scripts' );
