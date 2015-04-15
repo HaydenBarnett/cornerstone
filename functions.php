@@ -1,6 +1,28 @@
 <?php
 
 
+/* --------------------------------------------------------------
+   General
+   -------------------------------------------------------------- */
+
+// Set content width
+
+if ( ! isset( $content_width ) ) {
+    $content_width = 1170;
+}
+
+
+
+/* --------------------------------------------------------------
+   Plugins
+   -------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------
+   Menus
+   -------------------------------------------------------------- */
+
 // Configure example nav
 
 function cornerstone_nav() {
@@ -27,14 +49,38 @@ function cornerstone_nav() {
 }
 
 
-// Set content width
-
-if ( ! isset( $content_width ) ) {
-    $content_width = 1170;
-}
+/* --------------------------------------------------------------
+   Widget Areas
+   -------------------------------------------------------------- */
 
 
-// Replace Wordpress login logo
+
+/* --------------------------------------------------------------
+   Custom Posts
+   -------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------
+   Wordpress Setup
+   -------------------------------------------------------------- */
+
+
+// Set custom excerpt length
+
+function cornerstone_excerpt_more( $length ) {
+    return 50;
+} add_filter( 'excerpt_length', 'cornerstone_excerpt_more', 999 );
+
+
+// Set excerpt more link
+
+function cornerstone_excerpt_more( $more ) {
+    return ' ...';
+} add_filter('excerpt_more', 'cornerstone_excerpt_more');
+
+
+// Set Wordpress login logo image
 
 function cornerstone_login_logo() { ?> 
     <style type="text/css"> 
@@ -43,21 +89,21 @@ function cornerstone_login_logo() { ?>
 <?php } add_action( 'login_enqueue_scripts', 'cornerstone_login_logo' );
 
 
-// Relink Wordpress login logo
+// Set Wordpress login logo url
 
 function cornerstone_logo_url() {
     return home_url();
 } add_filter( 'login_headerurl', 'cornerstone_logo_url' );
 
 
-// Rename Wordpress login logo title
+// Set Wordpress login logo title
 
 function cornerstone_logo_title() {
     return get_bloginfo("name");
 } add_filter( 'login_headertitle', 'cornerstone_logo_title' );
 
 
-// Rename Wordpress login logo title
+// Remove Wordpress admin logo
 
 function cornerstone_remove_admin_logo() { ?> 
     <style type="text/css"> 
@@ -66,11 +112,11 @@ function cornerstone_remove_admin_logo() { ?>
 <?php } add_action('wp_before_admin_bar_render', 'cornerstone_remove_admin_logo', 0);
 
 
-//  Remove unused wordpress interface items
+// Remove unused wordpress interface items
 
 function remove_menus() {
-    remove_menu_page( 'edit-comments.php' );      // Comments
-    remove_menu_page( 'tools.php' );              // Tools
+    remove_menu_page( 'edit-comments.php' );   // Comments
+    remove_menu_page( 'tools.php' );           // Tools
 } add_action( 'admin_menu', 'remove_menus' );
 
 
@@ -108,7 +154,7 @@ function cornerstone_scripts() {
 } add_action( 'wp_enqueue_scripts', 'cornerstone_scripts' );
 
 
-// Cleanup wp_head
+// Cleanup Wordpress head
 
 function cornerstone_init() {
 	remove_action('wp_head', 'rsd_link');
