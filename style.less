@@ -18,7 +18,7 @@
    Mixins
    -------------------------------------------------------------- */
 
-.transition (@transition) {
+.transition (@transition: 0.4s ease all) {
     -webkit-transition: @transition;  
     -moz-transition:    @transition;
     -ms-transition:     @transition; 
@@ -26,7 +26,7 @@
     transition:         @transition; 
 }
 
-.transition2 (@transition, @transition2) {
+.transition2 (@transition: 0.4s ease border, @transition2: 0.4s ease background-color) {
     -webkit-transition: @transition, @transition2;  
     -moz-transition:    @transition, @transition2; 
     -ms-transition:     @transition, @transition2; 
@@ -34,13 +34,26 @@
     transition:         @transition, @transition2; 
 }
 
-.border-radius (@radius) {
-    -webkit-border-radius: @radius;
-    -moz-border-radius:    @radius;
-    border-radius:         @radius;
-    -moz-background-clip:    padding;
-    -webkit-background-clip: padding-box;
-    background-clip:         padding-box;
+.border-radius(@radius: 3px) {
+    -webkit-border-radius:      @radius;
+    -moz-border-radius:         @radius;
+    border-radius:              @radius;
+    -moz-background-clip:       padding;
+    -webkit-background-clip:    padding-box;
+    background-clip:            padding-box;
+}
+
+.background-rgb(@color, @opacity: 1) {
+    background-color: rgba(red(@color), green(@color), blue(@color), @opacity);
+}
+
+.background-cover() {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* --------------------------------------------------------------
@@ -51,7 +64,7 @@
 @color-white: #fff;
 @color-off-white: #f0f0f0;
 @color-grey: #ccc;
-@color-primary: #3498db;
+@color-blue: #3498db;
 
 /* --------------------------------------------------------------
    General
@@ -79,13 +92,14 @@ h6 {
 
 a, 
 a:visited {
-    color: @color-primary;
+    color: @color-blue;
     text-decoration: none;
+    .transition();
 }
 a:hover, 
 a:focus,
 a:active {
-    color: lighten(@color-primary, 20%);
+    color: lighten(@color-blue, 20%);
 }
 
 hr {
@@ -111,7 +125,7 @@ hr {
    -------------------------------------------------------------- */
 
 header {
-    background-color: @color-primary;
+    background-color: @color-blue;
     .branding {
         float: left;
         h1 {
