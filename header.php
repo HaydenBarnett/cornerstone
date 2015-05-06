@@ -37,7 +37,7 @@
             </div>
 
             <nav>
-                <?php cornerstone_nav(); ?>
+                <?php primary_nav(); ?>
             </nav>
 
         </div>
