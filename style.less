@@ -11,8 +11,19 @@
     License URI: 
 */
 
-@import (less) "css/normalize.less";
-@import (less) "css/basics.less";
+
+/* --------------------------------------------------------------
+   Variables
+   -------------------------------------------------------------- */
+
+@color-black: #333;
+@color-white: #fff;
+@color-off-white: #f0f0f0;
+@color-grey: #ccc;
+@color-blue: #3498db;
+
+@gutter: 15px;
+
 
 /* --------------------------------------------------------------
    Mixins
@@ -56,15 +67,15 @@
     background-size: cover;
 }
 
+
 /* --------------------------------------------------------------
-   Variables
+   Imports
    -------------------------------------------------------------- */
 
-@color-black: #333;
-@color-white: #fff;
-@color-off-white: #f0f0f0;
-@color-grey: #ccc;
-@color-blue: #3498db;
+@import (less) "css/normalize.less";
+@import (less) "css/basics.less";
+@import (less) "css/bootstrap.less";
+
 
 /* --------------------------------------------------------------
    General
@@ -106,19 +117,6 @@ hr {
     border-top: 1px solid @color-grey;
 }
 
-/* --------------------------------------------------------------
-   Structure
-   -------------------------------------------------------------- */
-
-#wrapper {
-    
-}
-
-.container {
-    width: 960px;
-    max-width: 100%;
-    margin: 0 auto;
-}
 
 /* --------------------------------------------------------------
    Header
@@ -159,6 +157,7 @@ header {
     }
 }
 
+
 /* --------------------------------------------------------------
    Content
    -------------------------------------------------------------- */
@@ -167,8 +166,8 @@ header {
     background-color: @color-white;
 }
 
-#content-inner {
-    padding: 60px 0;
+article {
+    padding: 30px 0;
     .page-header {
         border-bottom: 1px solid @color-grey;
     }
@@ -176,6 +175,7 @@ header {
 
     }
 }
+
 
 /* --------------------------------------------------------------
    Footer
@@ -185,6 +185,7 @@ footer {
     color: @color-grey;
     text-align: center;
 }
+
 
 /* --------------------------------------------------------------
    Responsive
@@ -219,3 +220,4 @@ footer {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
 }
+

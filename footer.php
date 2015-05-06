@@ -1,13 +1,23 @@
     
     </div><!-- #content -->
 
-    <footer>
-        <div class="container">
-            <p>&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?></p>
-        </div>
-    </footer>
+    <footer class="clearfix">
 
-</div><!-- #wrapper -->
+        <div class="container">
+
+        	<div class="row">
+
+        		<div class="col-md-12">
+
+            		<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+
+				</div>
+
+			</div>
+
+        </div>
+
+    </footer>
 
 <?php wp_footer(); ?>
 

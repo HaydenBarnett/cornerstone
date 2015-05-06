@@ -26,8 +26,6 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div id="wrapper">
-
     <header class="clearfix">
 
         <div class="container">
@@ -44,4 +42,4 @@
 
     </header>
 
-    <div id="content">
+    <div id="content" class="clearfix">
