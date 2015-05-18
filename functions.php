@@ -25,7 +25,7 @@ if ( ! isset( $content_width ) ) {
 
 // Configure example nav
 
-function primary_nav() {
+function primary_menu() {
     wp_nav_menu(
         array(
             'theme_location'  => 'primary',

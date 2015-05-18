@@ -35,7 +35,7 @@
             </div>
 
             <nav>
-                <?php primary_nav(); ?>
+                <?php primary_menu(); ?>
             </nav>
 
         </div>
