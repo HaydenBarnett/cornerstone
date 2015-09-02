@@ -143,6 +143,11 @@ header {
     }
 }
 
+
+/* --------------------------------------------------------------
+   Menus
+   -------------------------------------------------------------- */
+
 #primary-menu {
     float: right;
     .menu {
@@ -195,6 +200,28 @@ header {
     }
 }
 
+#footer-menu {
+    .menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: block;
+                a {
+                    display: block;
+                    padding: 8px 10px;
+                    color: @color-grey;
+                    text-align: left;
+                    border-top: 1px solid fade(@color-white, 10%);
+                    &:hover, &:active, &:focus {
+                        color: @color-blue;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* --------------------------------------------------------------
    Content
@@ -219,9 +246,26 @@ article {
    Footer
    -------------------------------------------------------------- */
 
+.search-form {
+    text-align: left;
+    input[type="submit"] {
+        display: none;
+    }
+    input[type="search"] {
+        padding: 8px;
+    }
+}
+
 footer {
-    color: @color-grey;
+    color: @color-silver;
     text-align: center;
+    .search-form {
+        margin: 20px 0;
+    }
+    p {
+        margin: 28px 0;
+        text-align: right;
+    }
 }
 
 
@@ -246,6 +290,11 @@ footer {
     }
     .hamburger {
         display: block;
+    }
+    footer {
+        p {
+            text-align: left;
+        }
     }
 }
 
