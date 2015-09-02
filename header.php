@@ -31,7 +31,7 @@
         <div class="container">
 
             <div class="branding">
-                <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo("name"); ?></a></h1>
+                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>"></a>
             </div>
 
             <nav>
