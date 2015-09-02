@@ -1,6 +1,5 @@
 <?php
 
-
 /* --------------------------------------------------------------
    General
    -------------------------------------------------------------- */
@@ -12,23 +11,21 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+
+/* --------------------------------------------------------------
+   Plugins
+   -------------------------------------------------------------- */
+
 //  Disable contact form 7 scripts and styles
 
 // add_filter( 'wpcf7_load_js', '__return_false' );
 // add_filter( 'wpcf7_load_css', '__return_false' );
 
 
-//  Load contact form 7 scripts and styles
+//  Use this to load contact form 7 scripts and styles on the contact page template
 
 // if ( function_exists( 'wpcf7_enqueue_scripts' ) ) wpcf7_enqueue_scripts();
 // if ( function_exists( 'wpcf7_enqueue_styles' ) ) wpcf7_enqueue_styles();
-
-
-
-/* --------------------------------------------------------------
-   Plugins
-   -------------------------------------------------------------- */
-
 
 
 /* --------------------------------------------------------------
@@ -96,7 +93,13 @@ function set_excerpt_more( $more ) {
 
 function set_login_logo() { ?> 
     <style type="text/css"> 
-        .login h1 a { background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png); }
+        .login h1 a { 
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/symbol.png);
+            -webkit-background-size: 140px;
+            background-size: 140px;
+            height: 140px;
+            width: auto;
+        }
     </style>
 <?php } add_action( 'login_enqueue_scripts', 'set_login_logo' );
 
@@ -128,7 +131,7 @@ function remove_admin_logos() { ?>
 
 function remove_menus() {
     remove_menu_page( 'edit-comments.php' );   // Comments
-    remove_menu_page( 'tools.php' );           // Tools
+    // remove_menu_page( 'tools.php' );        // Tools
 } add_action( 'admin_menu', 'remove_menus' );
 
 
@@ -157,14 +160,29 @@ function mce_buttons($buttons) {
 // Setup Theme
 
 function setup_theme() {
-    add_theme_support('post-thumbnails');
-    add_theme_support('title-tag');
+    // Add custom image sizes
+
+    // add_image_size( 'banner', 1920, 1080, true );
+    
+    // Register menus
+
     register_nav_menus(array(
         'primary' => __( 'Primary Menu', 'cornerstone' )
     ));
+
+    // Add theme support
+
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
     add_theme_support('html5', array(
-        'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+        'search-form', 
+        'comment-form', 
+        'comment-list', 
+        'gallery', 
+        'caption',
+        'widgets'
     ));
+
 } add_action('after_setup_theme', 'setup_theme');
 
 

@@ -10,7 +10,9 @@
 
     <!--[if lt IE 9]>
         <script src="<?php echo esc_url(get_template_directory_uri()); ?>/js/html5shiv.js"></script>
-    <![endif]-->
+    <![endif]-->    
+
+    <?php wp_head(); ?>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -20,9 +22,7 @@
         ga('create', 'UA-XXXXXXXX-X', 'auto');
         ga('send', 'pageview');
     </script>
-
-    <?php wp_head(); ?>
-
+    
 </head>
 <body <?php body_class(); ?>>
 
