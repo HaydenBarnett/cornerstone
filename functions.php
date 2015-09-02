@@ -12,6 +12,18 @@ if ( ! isset( $content_width ) ) {
 }
 
 
+//  Disable contact form 7 scripts and styles
+
+// add_filter( 'wpcf7_load_js', '__return_false' );
+// add_filter( 'wpcf7_load_css', '__return_false' );
+
+
+//  Load contact form 7 scripts and styles
+
+// if ( function_exists( 'wpcf7_enqueue_scripts' ) ) wpcf7_enqueue_scripts();
+// if ( function_exists( 'wpcf7_enqueue_styles' ) ) wpcf7_enqueue_styles();
+
+
 
 /* --------------------------------------------------------------
    Plugins
