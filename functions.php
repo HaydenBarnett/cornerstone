@@ -145,6 +145,15 @@ function disable_emojis() {
 } add_action( 'init', 'disable_emojis' );
 
 
+// Show superscript & subscript in visual editor
+
+function mce_buttons($buttons) {   
+    $buttons[] = 'superscript';
+    $buttons[] = 'subscript';
+    return $buttons;
+} add_filter('mce_buttons_2', 'mce_buttons');
+
+
 // Setup Theme
 
 function setup_theme() {
