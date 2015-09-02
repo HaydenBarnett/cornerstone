@@ -8,11 +8,11 @@
 
                 <div class="col-md-12">
 
-                    <div class="page-header">
+                    <div class="page-header animated fadeIn">
                         <h1><?php the_title(); ?></h1>
                     </div>
 
-                    <div class="page-content">
+                    <div class="page-content animated fadeIn">
                         <?php the_content(); ?>
                     </div>
 

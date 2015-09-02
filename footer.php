@@ -9,7 +9,7 @@
 
         		<div class="col-md-12">
 
-            		<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+            		<p class="animated fadeIn">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 
 				</div>
 
