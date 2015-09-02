@@ -34,11 +34,21 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>"></a>
             </div>
 
-            <nav>
+            <nav id="primary-menu">
                 <?php primary_menu(); ?>
             </nav>
 
         </div>
+
+        <nav id="mobile-menu">
+            <?php primary_menu(); ?>
+        </nav>
+
+        <a href="javascript:void(0)" class="hamburger"> 
+            <div class="menu-bar bar-1"></div>
+            <div class="menu-bar bar-2"></div>
+            <div class="menu-bar bar-3"></div>
+        </a>
 
     </header>
 

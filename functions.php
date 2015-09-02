@@ -42,7 +42,7 @@ function primary_menu() {
         array(
             'theme_location'  => 'primary',
             'menu'            => '',
-            'container'       => 'div',
+            'container'       => '',
             'container_class' => '',
             'container_id'    => '',
             'menu_class'      => 'menu',

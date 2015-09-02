@@ -16,13 +16,20 @@
    Variables
    -------------------------------------------------------------- */
 
-@color-black: #333;
-@color-white: #fff;
-@color-off-white: #f0f0f0;
-@color-grey: #ccc;
 @color-blue: #3498db;
 
+@color-white: #fff;
+@color-off-white: #f8f8f8;
+@color-light-grey: #eee;
+@color-silver: #ccc;
+@color-grey: #999;
+@color-dark-grey: #444;
+@color-off-black: #333;
+@color-black: #000;
+
 @gutter: 15px;
+
+@font-family-primary: Helvetica, Arial, sans-serif;
 
 
 /* --------------------------------------------------------------
@@ -32,7 +39,7 @@
 .transition (@transition: 0.4s ease all) {
     -webkit-transition: @transition;  
     -moz-transition:    @transition;
-    -ms-transition:     @transition; 
+    -ms-transition:     @transition;
     -o-transition:      @transition;
     transition:         @transition; 
 }
@@ -54,10 +61,6 @@
     background-clip:            padding-box;
 }
 
-.background-rgb(@color, @opacity: 1) {
-    background-color: rgba(red(@color), green(@color), blue(@color), @opacity);
-}
-
 .background-cover() {
     background-repeat: no-repeat;
     background-position: center center;
@@ -76,6 +79,8 @@
 @import (less) "css/basics.less";
 @import (less) "css/bootstrap.less";
 @import (less) "css/gridfix.less";
+@import (less) "css/animate.less";
+@import (less) "css/hamburger.less";
 
 
 /* --------------------------------------------------------------
@@ -88,6 +93,7 @@ html {
 
 body {
     background-color: @color-off-white;
+    font-family: @font-family-primary;
 }
 
 h1, 
@@ -135,22 +141,53 @@ header {
             }
         }
     }
-    nav {
-        float: right;
-        .menu {
-            ul {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                li {
+}
+
+#primary-menu {
+    float: right;
+    .menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
                     display: inline-block;
-                    a {
-                        display: inline-block;
-                        padding: 20px;
-                        color: @color-white;
-                        &:hover, &:active, &:focus {
-                            text-decoration: underline;
-                        }
+                    padding: 20px;
+                    color: @color-white;
+                    &:hover, &:active, &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#mobile-menu {
+    background-color: @color-blue;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    &.active {
+        display: block;
+    }
+    .menu {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: block;
+                a {
+                    display: block;
+                    padding: 18px;
+                    color: @color-white;
+                    border-top: 1px solid fade(@color-white, 10%);
+                    &:hover, &:active, &:focus {
+                        background-color: fade(@color-white, 10%);
                     }
                 }
             }
@@ -170,7 +207,7 @@ header {
 article {
     padding: 30px 0;
     .page-header {
-        border-bottom: 1px solid @color-grey;
+        
     }
     .page-content {
 
@@ -192,28 +229,33 @@ footer {
    Responsive
    -------------------------------------------------------------- */
 
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1199px) {
 
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (max-width : 991px) {
+    
+}
+
+/* Small Devices, Phones */ 
+@media only screen and (max-width : 767px) {
+    #primary-menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Small Phones */ 
+@media only screen and (max-width : 479px) {
 
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
 
 }
 

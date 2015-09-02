@@ -10,8 +10,8 @@
 
                     <div class="col-md-12">
 
-                            <?php the_title( '<h1>', '</h1>' ); ?>
                         <div class="page-header animated fadeIn">
+                            <h1><?php the_title(); ?></h1>
                         </div>
 
                         <div class="page-content animated fadeIn">

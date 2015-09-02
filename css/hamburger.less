@@ -1,0 +1,48 @@
+/*
+ * Hamburger
+ */
+
+.hamburger {
+    z-index: 999999;
+    position: absolute;
+    display: none;
+    height: 32px;
+    width: 32px;
+    margin: 0px;
+    top: 8px;
+    right: 16px;
+    div {
+        margin-top: 8px;
+        border-radius: 10px;
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background-color: @color-white;
+        .transition(0.4s ease all);
+        transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+    }
+    .bar-1 {
+        top: 5px;  
+        &.active {
+            background-color: @color-white;
+            top: 13px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .bar-2 {
+        top: 13px;
+        &.active {
+            opacity: 0;
+        }
+    }
+    .bar-3 {
+        top: 21px;
+        &.active {
+            background-color: @color-white;
+            top: 13px;
+            -webkit-transform: rotate(-225deg);
+            transform: rotate(-225deg);
+        }
+    }
+}
