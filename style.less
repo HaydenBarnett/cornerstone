@@ -1,14 +1,14 @@
 /*!
     Theme Name: Cornerstone
     Theme URI: http://github.com/haydenbarnett/cornerstone
-    Description: A lightweight starter kit for Wordpress developers
+    Description: A lightweight starter theme for WordPress developers
     Version: 1.0
     Author: Hayden Barnett
-    Author URI: http://www.haydenbarnett.com/
+    Author URI: http://haydenbarnett.com/
     Tags: 
 
-    License: 
-    License URI: 
+    License: WTFPL
+    License URI: http://www.wtfpl.net/
 */
 
 
@@ -16,7 +16,7 @@
    Variables
    -------------------------------------------------------------- */
 
-@color-blue: #3498db;
+@color-primary: #3498db;
 
 @color-white: #fff;
 @color-off-white: #f8f8f8;
@@ -29,7 +29,7 @@
 
 @gutter: 15px;
 
-@font-family-primary: Helvetica, Arial, sans-serif;
+@font-family-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 /* --------------------------------------------------------------
@@ -42,14 +42,6 @@
     -ms-transition:     @transition;
     -o-transition:      @transition;
     transition:         @transition; 
-}
-
-.transition2 (@transition: 0.4s ease border, @transition2: 0.4s ease background-color) {
-    -webkit-transition: @transition, @transition2;  
-    -moz-transition:    @transition, @transition2; 
-    -ms-transition:     @transition, @transition2; 
-    -o-transition:      @transition, @transition2; 
-    transition:         @transition, @transition2; 
 }
 
 .border-radius(@radius: 3px) {
@@ -108,20 +100,24 @@ h6 {
     padding: 0;
 }
 
-a, 
-a:visited {
-    color: @color-blue;
+
+a {
+    color: @color-primary;
     text-decoration: none;
     .transition();
-}
-a:hover, 
-a:focus,
-a:active {
-    color: lighten(@color-blue, 20%);
+    &:visited {
+        color: @color-primary;
+        text-decoration: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: lighten(@color-primary, 20%);
+    }
 }
 
 hr {
-    border-top: 1px solid @color-grey;
+    background-color: @color-silver;
 }
 
 
@@ -129,8 +125,8 @@ hr {
    Header
    -------------------------------------------------------------- */
 
-header {
-    background-color: @color-blue;
+#header {
+    background-color: @color-primary;
     .branding {
         float: left;
         h1 {
@@ -150,20 +146,18 @@ header {
 
 #primary-menu {
     float: right;
-    .menu {
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            li {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
                 display: inline-block;
-                a {
-                    display: inline-block;
-                    padding: 20px;
-                    color: @color-white;
-                    &:hover, &:active, &:focus {
-                        text-decoration: underline;
-                    }
+                padding: 20px;
+                color: @color-white;
+                &:hover, &:active, &:focus {
+                    text-decoration: underline;
                 }
             }
         }
@@ -171,7 +165,7 @@ header {
 }
 
 #mobile-menu {
-    background-color: @color-blue;
+    background-color: @color-primary;
     position: absolute;
     width: 100%;
     z-index: 1000;
@@ -179,21 +173,19 @@ header {
     &.active {
         display: block;
     }
-    .menu {
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            li {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: block;
+            a {
                 display: block;
-                a {
-                    display: block;
-                    padding: 18px;
-                    color: @color-white;
-                    border-top: 1px solid fade(@color-white, 10%);
-                    &:hover, &:active, &:focus {
-                        background-color: fade(@color-white, 10%);
-                    }
+                padding: 18px;
+                color: @color-white;
+                border-top: 1px solid fade(@color-white, 10%);
+                &:hover, &:active, &:focus {
+                    background-color: fade(@color-white, 10%);
                 }
             }
         }
@@ -201,27 +193,26 @@ header {
 }
 
 #footer-menu {
-    .menu {
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            li {
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: block;
+            a {
                 display: block;
-                a {
-                    display: block;
-                    padding: 8px 10px;
-                    color: @color-grey;
-                    text-align: left;
-                    border-top: 1px solid fade(@color-white, 10%);
-                    &:hover, &:active, &:focus {
-                        color: @color-blue;
-                    }
+                padding: 8px 10px;
+                color: @color-grey;
+                text-align: left;
+                border-top: 1px solid fade(@color-white, 10%);
+                &:hover, &:active, &:focus {
+                    color: @color-primary;
                 }
             }
         }
     }
 }
+
 
 /* --------------------------------------------------------------
    Content
@@ -231,7 +222,7 @@ header {
     background-color: @color-white;
 }
 
-article {
+section {
     padding: 30px 0;
     .page-header {
         
@@ -239,6 +230,109 @@ article {
     .page-content {
 
     }
+}
+
+
+/* --------------------------------------------------------------
+   Wordress Core
+   -------------------------------------------------------------- */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img {
+    &.alignright {
+        float: right;
+        margin: 5px 0 20px 20px;
+    }
+    &.alignnone {
+        margin: 5px 20px 20px 0;
+    }
+    &.alignleft {
+        float: left;
+        margin: 5px 20px 20px 0;
+    }
+    &.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+    &.alignnone {
+        margin: 5px 20px 20px 0;
+    }
+    &.alignleft {
+        margin: 5px 20px 20px 0;
+    }
+    &.alignright {
+        margin: 5px 0 20px 20px;
+    }
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 98.5%;
+        padding: 0;
+        width: auto;
+    }
+    p.wp-caption-text {
+        font-size: 11px;
+        line-height: 17px;
+        margin: 0;
+        padding: 0 4px 5px;
+    }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 
@@ -256,13 +350,13 @@ article {
     }
 }
 
-footer {
+#footer {
     color: @color-silver;
     text-align: center;
     .search-form {
         margin: 20px 0;
     }
-    p {
+    .copyright {
         margin: 28px 0;
         text-align: right;
     }

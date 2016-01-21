@@ -11,7 +11,6 @@ if ( ! isset( $content_width ) ) {
 }
 
 
-
 /* --------------------------------------------------------------
    Plugins
    -------------------------------------------------------------- */
@@ -130,7 +129,7 @@ function remove_admin_logos() { ?>
 // Remove unused wordpress interface items
 
 function remove_menus() {
-    remove_menu_page( 'edit-comments.php' );   // Comments
+    // remove_menu_page( 'edit-comments.php' );   // Comments
     // remove_menu_page( 'tools.php' );        // Tools
 } add_action( 'admin_menu', 'remove_menus' );
 
@@ -172,8 +171,8 @@ function setup_theme() {
 
     // Add theme support
 
-    add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
     add_theme_support('html5', array(
         'search-form', 
         'comment-form', 
@@ -191,7 +190,8 @@ function setup_theme() {
 function dequeue_jquery_migrate(&$scripts){
     if(!is_admin()){
         $scripts->remove('jquery');
-        $scripts->add('jquery', false, array( 'jquery-core' ));
+        // Uncomment if you want to load jQuery from Wordpress Core
+        // $scripts->add('jquery', false, array( 'jquery-core' ));
     }
 } add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
 
@@ -202,7 +202,7 @@ function queue_scripts() {
     $theme = wp_get_theme();
     $theme_version = $theme['Version'];
     wp_enqueue_style('theme-styles', get_stylesheet_uri(), '', $theme_version);
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', '', '1.11.3', true);
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', '', '2.2.0', true);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), $theme_version, true);
 } add_action( 'wp_enqueue_scripts', 'queue_scripts' );
 
@@ -214,5 +214,6 @@ function theme_init() {
 	remove_action('wp_head', 'wlwmanifest_link');
 	remove_action('wp_head', 'wp_generator');
 } add_action('init', 'theme_init');
+
 
 ?>

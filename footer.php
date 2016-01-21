@@ -1,7 +1,7 @@
     
     </div><!-- #content -->
 
-    <footer class="clearfix">
+    <footer id="footer">
 
         <div class="container">
 
@@ -16,7 +16,7 @@
 
         		<div class="col-sm-6">
 
-            		<p class="animated fadeIn">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+            		<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 
 				</div>
 
