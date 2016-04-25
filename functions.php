@@ -27,6 +27,17 @@ if ( ! isset( $content_width ) ) {
 // if ( function_exists( 'wpcf7_enqueue_styles' ) ) wpcf7_enqueue_styles();
 
 
+//  Hide yoast for defined custom post types
+
+/* 
+function yoast_is_toast(){
+    if (!current_user_can('activate_plugins')) {
+        remove_meta_box('wpseo_meta', 'custom_post_type', 'normal');
+    }
+} add_action('add_meta_boxes', 'yoast_is_toast', 99); 
+*/
+
+
 /* --------------------------------------------------------------
    Menus
    -------------------------------------------------------------- */
