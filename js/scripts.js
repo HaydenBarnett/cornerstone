@@ -5,9 +5,7 @@
 
 	$(".hamburger").click(function () {
         $("#mobile-menu").toggleClass('active');
-        $(".hamburger .bar-1").toggleClass("active");
-        $(".hamburger .bar-2").toggleClass("active");
-        $(".hamburger .bar-3").toggleClass("active");
+        $(".hamburger").toggleClass("active");
         return false;
     });
 

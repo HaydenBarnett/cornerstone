@@ -1,20 +1,20 @@
 <?php get_header(); ?>
 
-    <div class="container">
+    <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-            <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="container">
 
                 <div class="row">
 
                     <div class="col-md-12">
 
-                        <div class="page-header animated fadeIn">
+                        <div class="page-title">
                             <h1><?php the_title(); ?></h1>
                         </div>
 
-                        <div class="page-content animated fadeIn">
+                        <div class="page-content">
                             <?php the_content(); ?>
                         </div>
 
@@ -22,10 +22,10 @@
 
                 </div>
 
-            </section>
+            </div>
 
-        <?php endwhile; ?>
+        </section>
 
-    </div>
+    <?php endwhile; ?>
 
 <?php get_footer(); ?>

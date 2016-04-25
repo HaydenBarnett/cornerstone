@@ -1,43 +1,25 @@
 <?php get_header(); ?>
 
-    <div class="container">
+    <?php if ( have_posts() ) : ?>
 
-        <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+            <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <div class="container">
 
                     <div class="row">
 
                         <div class="col-md-12">
 
-                            <div class="page-header animated fadeIn">
-                                <h1><?php the_title(); ?></h1>
+                            <div class="page-title">
+                                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                             </div>
 
-                            <div class="page-content animated fadeIn">
+                            <div class="page-content">
                                 <?php the_content(); ?>
                             </div>
 
-                        </div>
-
-                    </div>
-
-                </section>
-
-            <?php endwhile; ?>
-
-        <?php else: ?>
-
-            <section>
-
-                <div class="row">
-
-                    <div class="col-md-12">
-
-                        <div class="page-header animated fadeIn">
-                            <h1>Nothing found</h1>
                         </div>
 
                     </div>
@@ -46,8 +28,26 @@
 
             </section>
 
-        <?php endif; ?>
+        <?php endwhile; ?>
 
-    </div>
+    <?php else: ?>
+
+        <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <div class="page-title">
+                        <h1>Nothing found</h1>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <?php endif; ?>
     
 <?php get_footer(); ?>
