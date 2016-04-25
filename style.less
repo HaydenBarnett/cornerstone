@@ -24,7 +24,7 @@
 @color-silver: #ccc;
 @color-grey: #999;
 @color-dark-grey: #444;
-@color-off-black: #333;
+@color-off-black: #2a2a2a;
 @color-black: #000;
 
 @gutter: 15px;
@@ -60,6 +60,15 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.background-contain() {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
 
@@ -115,6 +124,11 @@ a {
     }
 }
 
+p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
 hr {
     background-color: @color-silver;
 }
@@ -128,13 +142,6 @@ hr {
     background-color: @color-primary;
     .branding {
         float: left;
-        h1 {
-            margin: 10px 0;
-            padding: 0;
-            a {
-                color: @color-white;
-            }
-        }
     }
 }
 
@@ -156,8 +163,11 @@ hr {
                 padding: 20px;
                 color: @color-white;
                 &:hover, &:active, &:focus {
-                    text-decoration: underline;
+                    background-color: fade(@color-white, 20%);
                 }
+            }
+            &.current_page_item {
+                background-color: fade(@color-white, 10%);
             }
         }
     }
@@ -180,7 +190,7 @@ hr {
             display: block;
             a {
                 display: block;
-                padding: 18px;
+                padding: @gutter;
                 color: @color-white;
                 border-top: 1px solid fade(@color-white, 10%);
                 &:hover, &:active, &:focus {
@@ -222,7 +232,7 @@ hr {
 }
 
 section {
-    padding: 30px 0;
+    padding: @gutter*2 0;
     .page-title {
         
     }
@@ -341,21 +351,27 @@ a img {
 
 .search-form {
     text-align: left;
-    margin: 20px 0;
+    margin-bottom: @gutter;
     input[type="submit"] {
         display: none;
     }
     input[type="search"] {
-        padding: 8px;
+        padding: @gutter/2;
+        outline: 0;
+        border: 1px solid @color-silver;
+        &:focus, &:active {
+            border-color: @color-grey;
+        }
     }
 }
 
 #footer {
     color: @color-silver;
     text-align: center;
+    padding: @gutter 0;
     .copyright {
-        margin: 28px 0;
         text-align: right;
+        margin: @gutter*2 0;
     }
 }
 

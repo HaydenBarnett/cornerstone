@@ -34,12 +34,20 @@
 
         <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-            <div class="row">
+            <div class="container">
 
-                <div class="col-md-12">
+                <div class="row">
 
-                    <div class="page-title">
-                        <h1>Nothing found</h1>
+                    <div class="col-md-12">
+
+                        <div class="page-title">
+                            <h1>Nothing found</h1>
+                        </div>
+
+                        <div class="page-content">
+                            <p>Perhaps the <a href="<?php echo esc_html(home_url()); ?>">Home page</a> will have what you are searching for.</p>
+                        </div>
+
                     </div>
 
                 </div>

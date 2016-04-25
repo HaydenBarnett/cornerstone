@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-    <div class="container">
- 
-        <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+        <div class="container">
+ 
             <div class="row">
 
                 <div class="col-md-12">
 
-                    <div class="page-header">
+                    <div class="page-title">
                         <h1>Nothing found</h1>
                     </div>
 
@@ -20,8 +20,8 @@
 
             </div>
 
-        </section>
+        </div>
 
-    </div>
+    </section>
 
 <?php get_footer(); ?>

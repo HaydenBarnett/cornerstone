@@ -26,17 +26,25 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header id="header" class="clearfix">
+    <header id="header">
 
         <div class="container">
 
-            <div class="branding">
-                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>"></a>
-            </div>
+            <div class="row">
 
-            <nav id="primary-menu">
-                <?php primary_menu(); ?>
-            </nav>
+                <div class="col-md-12">
+
+                    <div class="branding">
+                        <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>"></a>
+                    </div>
+
+                    <nav id="primary-menu">
+                        <?php primary_menu(); ?>
+                    </nav>
+
+                </div>
+
+            </div>
 
         </div>
 

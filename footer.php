@@ -8,10 +8,12 @@
         	<div class="row">
 
                 <div class="col-sm-6">
+                    
                     <?php get_search_form(); ?>
                     <nav id="footer-menu">
                         <?php primary_menu(); ?>
                     </nav>
+
                 </div>
 
         		<div class="col-sm-6">
