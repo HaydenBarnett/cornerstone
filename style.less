@@ -201,27 +201,6 @@ hr {
     }
 }
 
-#footer-menu {
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        li {
-            display: block;
-            a {
-                display: block;
-                padding: 8px 10px;
-                color: @color-grey;
-                text-align: left;
-                border-top: 1px solid fade(@color-white, 10%);
-                &:hover, &:active, &:focus {
-                    color: @color-primary;
-                }
-            }
-        }
-    }
-}
-
 
 /* --------------------------------------------------------------
    Content
@@ -351,7 +330,7 @@ a img {
 
 .search-form {
     text-align: left;
-    margin-bottom: @gutter;
+    margin: @gutter 0;
     input[type="submit"] {
         display: none;
     }
@@ -371,7 +350,7 @@ a img {
     padding: @gutter 0;
     .copyright {
         text-align: right;
-        margin: @gutter*2 0;
+        margin: @gutter 0;
     }
 }
 
