@@ -9,4 +9,8 @@
         return false;
     });
 
+    // Auto wrap iframes with responsive container
+
+    $("iframe").wrap("<div class='video-container'/>");
+
 }(jQuery));
