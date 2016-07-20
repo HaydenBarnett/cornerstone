@@ -29,7 +29,7 @@
 
 @gutter: 15px;
 
-@font-family-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-family-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 /* --------------------------------------------------------------
@@ -42,15 +42,6 @@
     -ms-transition:     @transition;
     -o-transition:      @transition;
     transition:         @transition; 
-}
-
-.border-radius(@radius: 3px) {
-    -webkit-border-radius:      @radius;
-    -moz-border-radius:         @radius;
-    border-radius:              @radius;
-    -moz-background-clip:       padding;
-    -webkit-background-clip:    padding-box;
-    background-clip:            padding-box;
 }
 
 .background-cover() {
@@ -191,9 +182,19 @@ hr {
    -------------------------------------------------------------- */
 
 #header {
-    background-color: @color-primary;
+    position: relative;
+    background-color: @color-white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
     .branding {
         float: left;
+        a {
+            img {
+                width: 200px;
+                padding: 18px 0;
+            }
+        }
     }
 }
 
@@ -215,11 +216,12 @@ hr {
             position: relative;
             display: inline-block;
             a {
+                color: @color-grey;
+                font-size: 16px;
                 display: inline-block;
-                padding: 21px;
-                color: @color-white;
+                padding: 28px 20px;
                 &:hover, &:active, &:focus {
-                    background-color: fade(@color-white, 20%);
+                    color: @color-primary;
                 }
             }
             &:hover {
@@ -228,15 +230,20 @@ hr {
                 }
             }
             &.current_page_item {
-                background-color: fade(@color-white, 10%);
+                > a {
+                    color: @color-primary;    
+                }
             }
             ul {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
-                background-color: darken(@color-primary, 5%);
+                background-color: @color-white;
                 width: 240px;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                            0 3px 1px -2px rgba(0,0,0,.2),
+                            0 1px 5px 0 rgba(0,0,0,.12);
                 li {
                     display: block;
                     width: 100%;
@@ -256,6 +263,9 @@ hr {
     width: 100%;
     z-index: 1000;
     display: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+                0 3px 1px -2px rgba(0,0,0,.2),
+                0 1px 5px 0 rgba(0,0,0,.12);
     &.active {
         display: block;
     }
@@ -284,7 +294,7 @@ hr {
    -------------------------------------------------------------- */
 
 #content {
-    background-color: @color-white;
+    
 }
 
 section {
@@ -422,6 +432,7 @@ a img {
 }
 
 #footer {
+    border-top: 1px solid @color-light-grey;
     color: @color-silver;
     text-align: center;
     padding: @gutter 0;

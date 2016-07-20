@@ -35,7 +35,9 @@
                 <div class="col-md-12">
 
                     <div class="branding">
-                        <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>"></a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo("name"); ?>">
+                        </a>
                     </div>
 
                     <nav id="primary-menu">

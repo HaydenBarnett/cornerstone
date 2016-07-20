@@ -8,14 +8,14 @@
     display: none;
     height: 30px;
     width: 25px;
-    top: 17px;
-    right: 17px;
+    top: 25px;
+    right: 20px;
 
     .menu-bar {
         position: absolute;
         width: 25px;
         height: 3px;
-        background-color: @color-white;
+        background-color: @color-black;
         .transition(0.4s ease all);
     }
 
@@ -32,7 +32,7 @@
     &.active {
         .bar-1 {
             top: 13px;
-            background-color: @color-white;
+            background-color: @color-primary;
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
@@ -41,7 +41,7 @@
         }
         .bar-3 {
             top: 13px;
-            background-color: @color-white;
+            background-color: @color-primary;
             -webkit-transform: rotate(-225deg);
             transform: rotate(-225deg);
         }
