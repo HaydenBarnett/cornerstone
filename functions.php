@@ -145,10 +145,11 @@ function set_login_logo() { ?>
     <style type="text/css"> 
         #login h1 a { 
             background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/symbol.png);
-            -webkit-background-size: 140px;
-            background-size: 140px;
-            height: 140px;
+            -webkit-background-size: 70px;
+            background-size: 70px;
+            height: 70px;
             width: auto;
+            margin-bottom: 50px;
         }
     </style>
 <?php } add_action( 'login_enqueue_scripts', 'set_login_logo' );
