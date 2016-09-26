@@ -7,8 +7,8 @@
     Author URI: http://haydenbarnett.com/
     Tags: 
 
-    License: WTFPL
-    License URI: http://www.wtfpl.net/
+    License: 
+    License URI: 
 */
 
 
@@ -62,6 +62,11 @@
     background-size: contain;
 }
 
+.animation-delay(@delay) {
+    -webkit-animation-delay: @delay;
+    animation-delay: @delay;
+}
+
 
 /* --------------------------------------------------------------
    Imports
@@ -80,7 +85,7 @@
    -------------------------------------------------------------- */
 
 html {
-    color: @color-black;
+    color: @color-off-black;
 }
 
 body {
@@ -157,23 +162,16 @@ hr {
 }
 
 .delay-1 {
-    -webkit-animation-delay: .2s;
-    animation-delay: .2s;
+    .animation-delay(.2s);
 }
-
 .delay-2 {
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s;
+    .animation-delay(.4s);
 }
-
 .delay-3 {
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
+    .animation-delay(.6s);
 }
-
 .delay-4 {
-    -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
+    .animation-delay(.8s);
 }
 
 
@@ -189,7 +187,7 @@ hr {
         float: left;
         a {
             img {
-                width: 195px;
+                width: 189px;
                 padding: 24px 0;
             }
         }
@@ -260,9 +258,7 @@ hr {
     width: 100%;
     z-index: 1000;
     display: none;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
-                0 3px 1px -2px rgba(0,0,0,.2),
-                0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
     &.active {
         display: block;
     }
