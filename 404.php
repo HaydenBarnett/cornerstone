@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <section id="error-404">
 
         <div class="container">
  
