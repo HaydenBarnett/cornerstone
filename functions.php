@@ -10,6 +10,17 @@ if ( ! isset( $content_width ) ) {
     $content_width = 1170;
 }
 
+// Check if paginated
+
+function is_paginated() {
+    global $wp_query;
+    if ( $wp_query->max_num_pages > 1 ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 /* --------------------------------------------------------------
    Plugins
@@ -79,8 +90,8 @@ function primary_menu() {
    -------------------------------------------------------------- */
 
 
-// Create 'Project'
 // Custom post type & category example
+
 /*
 function create_project_post() {
 
@@ -135,7 +146,7 @@ function set_excerpt_length( $length ) {
 // Set excerpt more link
 
 function set_excerpt_more( $more ) {
-    return ' ...';
+    return ' ... <a class="read-more" href="'.get_permalink(get_the_ID()).'">continue reading</a>.';
 } add_filter('excerpt_more', 'set_excerpt_more');
 
 
@@ -144,12 +155,12 @@ function set_excerpt_more( $more ) {
 function set_login_logo() { ?> 
     <style type="text/css"> 
         #login h1 a { 
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/symbol.png);
-            -webkit-background-size: 70px;
-            background-size: 70px;
-            height: 70px;
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/symbol.svg);
+            -webkit-background-size: contain;
+            background-size: contain;
+            height: 80px;
             width: auto;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
     </style>
 <?php } add_action( 'login_enqueue_scripts', 'set_login_logo' );
@@ -253,9 +264,9 @@ function dequeue_jquery_migrate(&$scripts){
 function queue_scripts() {
     $theme = wp_get_theme();
     $theme_version = $theme['Version'];
-    wp_enqueue_style('roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:400,700,500,300', '');
-    wp_enqueue_style('theme-styles', get_stylesheet_uri(), '', $theme_version);
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', '', '2.2.3', true);
+    wp_enqueue_style('open-sans-font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600', '');
+    wp_enqueue_style('theme-styles', get_stylesheet_uri(), array(), $theme_version);
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), '3.3.1', true);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), $theme_version, true);
 } add_action( 'wp_enqueue_scripts', 'queue_scripts' );
 

@@ -1,6 +1,6 @@
-/*
- * Hamburger
- */
+/* --------------------------------------------------------------
+   Hamburger
+   -------------------------------------------------------------- */
 
 .hamburger {
     z-index: 999999;
@@ -8,7 +8,7 @@
     display: none;
     height: 30px;
     width: 25px;
-    top: 23px;
+    top: 22px;
     right: 20px;
 
     .menu-bar {
@@ -16,7 +16,7 @@
         width: 25px;
         height: 3px;
         background-color: @color-off-black;
-        .transition(0.4s ease all);
+        .transition();
     }
 
     .bar-1 {
@@ -30,20 +30,20 @@
     }
 
     &.active {
+        .menu-bar {
+            background-color: @color-blue;
+        }
         .bar-1 {
-            top: 13px;
-            background-color: @color-primary;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
         }
         .bar-2 {
             opacity: 0;
         }
         .bar-3 {
-            top: 13px;
-            background-color: @color-primary;
-            -webkit-transform: rotate(-225deg);
-            transform: rotate(-225deg);
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
         }
     }
+
 }

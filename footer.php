@@ -27,5 +27,7 @@
 
     <?php wp_footer(); ?>
 
+    <?php get_template_part( 'partials/analytics', 'footer' ); ?>
+
 </body>
 </html>

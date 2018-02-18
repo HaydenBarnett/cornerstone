@@ -7,71 +7,17 @@
     Author URI: http://haydenbarnett.com/
     Tags: 
 
-    License: 
-    License URI: 
+    License: CC0
+    License URI: https://creativecommons.org/publicdomain/zero/1.0/
 */
-
-
-/* --------------------------------------------------------------
-   Variables
-   -------------------------------------------------------------- */
-
-@color-primary: #3498db;
-
-@color-white: #fff;
-@color-off-white: #f8f8f8;
-@color-light-grey: #eee;
-@color-silver: #ccc;
-@color-grey: #999;
-@color-dark-grey: #444;
-@color-off-black: #2a2a2a;
-@color-black: #000;
-
-@gutter: 15px;
-
-@font-family-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-
-/* --------------------------------------------------------------
-   Mixins
-   -------------------------------------------------------------- */
-
-.transition (@transition: 0.4s ease all) {
-    -webkit-transition: @transition;  
-    -moz-transition:    @transition;
-    -ms-transition:     @transition;
-    -o-transition:      @transition;
-    transition:         @transition; 
-}
-
-.background-cover() {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.background-contain() {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-}
-
-.animation-delay(@delay) {
-    -webkit-animation-delay: @delay;
-    animation-delay: @delay;
-}
 
 
 /* --------------------------------------------------------------
    Imports
    -------------------------------------------------------------- */
 
+@import (less) "css/variables.less";
+@import (less) "css/mixins.less";
 @import (less) "css/normalize.less";
 @import (less) "css/basics.less";
 @import (less) "css/bootstrap.less";
@@ -89,8 +35,9 @@ html {
 }
 
 body {
-    background-color: @color-off-white;
+    background-color: @color-white;
     font-family: @font-family-primary;
+    font-size: @font-size;
 }
 
 h1, 
@@ -100,33 +47,58 @@ h4,
 h5, 
 h6 {
     color: @color-black;
-    margin: 20px 0 10px 0;
+    margin-top: 0;
+    margin-bottom: 0.5em;
     padding: 0;
+    font-weight: 600;
 }
 
 
 a {
-    color: @color-primary;
+    color: @color-blue;
     text-decoration: none;
-    .transition();
+    .transition(.4s ease color);
     &:visited {
-        color: @color-primary;
+        color: @color-blue;
         text-decoration: none;
     }
     &:hover,
     &:focus,
     &:active {
-        color: lighten(@color-primary, 20%);
+        color: lighten(@color-blue, 10%);
     }
 }
 
 p {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: @font-size;
+    line-height: 2em;
+    margin: 0 0 1em;
+}
+
+blockquote {
+	font-size: 30px;
+	line-height: 1.4em;
+	max-width: 800px;
+	color: @color-dark-grey;
+	margin: @padding 0;
+	padding-left: @padding;
+	border-left: 5px solid @color-light-grey;
+	p {
+		font-size: 30px;
+		line-height: 1.4em;
+	}
 }
 
 hr {
-    background-color: @color-silver;
+    background-color: @color-grey;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: @font-family-primary;
 }
 
 
@@ -182,13 +154,13 @@ hr {
 #header {
     position: relative;
     background-color: @color-white;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+    border-bottom: @border-width solid @color-light-grey;
     .branding {
         float: left;
         a {
             img {
-                width: 189px;
-                padding: 24px 0;
+                width: 180px;
+                padding: 15px 0;
             }
         }
     }
@@ -212,12 +184,13 @@ hr {
             position: relative;
             display: inline-block;
             a {
-                color: @color-grey;
-                font-size: 16px;
+                color: @color-off-black;
+                font-size: 14px;
+                font-weight: 600;
                 display: inline-block;
-                padding: 28px 20px;
+                padding: 26px 20px;
                 &:hover, &:active, &:focus {
-                    color: @color-primary;
+                    color: @color-blue;
                 }
             }
             &:hover {
@@ -227,7 +200,7 @@ hr {
             }
             &.current_page_item {
                 > a {
-                    color: @color-primary;    
+                    color: @color-blue;    
                 }
             }
             ul {
@@ -235,16 +208,24 @@ hr {
                 position: absolute;
                 top: 100%;
                 left: 0;
+                margin-top: -10px;
                 background-color: @color-white;
-                width: 240px;
-                box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+                width: 175px;
+                border-radius: @border-radius-large;
+                box-shadow: @shadow;
                 li {
                     display: block;
                     width: 100%;
                     a {
                         display: block;
                         width: 100%;
-                        padding: 20px 20px;
+                        padding: 15px 20px;
+                        border-bottom: @border-width solid @color-off-white;
+                    }
+                    &:last-child {
+                        a {
+                            border-bottom: 0;
+                        }
                     }
                 }
             }
@@ -253,12 +234,12 @@ hr {
 }
 
 #mobile-menu {
-    background-color: @color-primary;
+    background-color: @color-blue;
     position: absolute;
     width: 100%;
     z-index: 1000;
     display: none;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: @shadow;
     &.active {
         display: block;
     }
@@ -270,9 +251,9 @@ hr {
             display: block;
             a {
                 display: block;
-                padding: @gutter;
+                padding: @padding-small;
                 color: @color-white;
-                border-top: 1px solid fade(@color-white, 10%);
+                border-top: @border-width solid fade(@color-white, 10%);
                 &:hover, &:active, &:focus {
                     background-color: fade(@color-white, 10%);
                 }
@@ -291,13 +272,76 @@ hr {
 }
 
 section {
-    padding: @gutter*2 0;
+    padding: @padding-large 0;
+    border-bottom: @border-width solid @color-light-grey;
+
+    &.section-title {
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .page-title,
+    .post-title,
+    .excerpt-title {
+        padding-bottom: @padding;
+        h1 {
+            margin: 0;
+        }
+        time {
+            margin-top: @padding-small;
+            color: @color-dark-grey;
+        }
+    }
+
     .page-title {
         
     }
     .page-content {
-
+        
     }
+
+    .post-title {
+        
+    }
+    .post-content {
+        
+    }
+
+    .excerpt-title {
+        
+    }
+    .excerpt-content {
+        
+    }
+
+}
+
+
+/* --------------------------------------------------------------
+   Pagination
+   -------------------------------------------------------------- */
+
+.pagination {
+	.page-numbers {
+		padding: @padding-small/2 @padding-small;
+		font-weight: 600;
+		border: @border-width solid @color-light-grey;
+		display: inline-block;
+		border-radius: @border-radius;
+		box-shadow: @shadow;
+		.transition(.4s ease all);
+		&.current {
+			box-shadow: none;
+			background-color: @color-off-white;
+			&:hover {
+				border-color: @color-light-grey;
+			}
+		}
+		&:hover {
+			border-color: @color-grey;
+		}
+	}
 }
 
 
@@ -305,94 +349,71 @@ section {
    Wordress Core
    -------------------------------------------------------------- */
 
-.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter, div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 
 .alignright {
+    display: inline;
     float: right;
-    margin: 5px 0 20px 20px;
+    margin-left: 1.5em;
 }
 
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-a img {
-    &.alignright {
-        float: right;
-        margin: 5px 0 20px 20px;
-    }
-    &.alignnone {
-        margin: 5px 20px 20px 0;
-    }
-    &.alignleft {
-        float: left;
-        margin: 5px 20px 20px 0;
-    }
-    &.aligncenter {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.wp-caption,
+.gallery-caption {
+    color: #666;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-style: italic;
+    margin-bottom: 1.5em;
+    max-width: 100%;
 }
 
-.wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-    &.alignnone {
-        margin: 5px 20px 20px 0;
-    }
-    &.alignleft {
-        margin: 5px 20px 20px 0;
-    }
-    &.alignright {
-        margin: 5px 0 20px 20px;
-    }
-    img {
-        border: 0 none;
-        height: auto;
-        margin: 0;
-        max-width: 98.5%;
-        padding: 0;
-        width: auto;
-    }
-    p.wp-caption-text {
-        font-size: 11px;
-        line-height: 17px;
-        margin: 0;
-        padding: 0 4px 5px;
-    }
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Text meant only for screen readers. */
+.wp-caption .wp-caption-text {
+    margin: 0.8075em 0;
+}
+
+
+/* --------------------------------------------------------------
+   Accessibility
+   -------------------------------------------------------------- */
+
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
     height: 1px;
-    width: 1px;
     overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
 }
 
 .screen-reader-text:focus {
     background-color: #f1f1f1;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
-    font-weight: bold;
+    font-weight: 600;
     height: auto;
     left: 5px;
     line-height: normal;
@@ -400,7 +421,7 @@ a img {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000; /* Above WP toolbar. */
+    z-index: 100000;
 }
 
 
@@ -410,14 +431,19 @@ a img {
 
 .search-form {
     text-align: left;
-    margin: @gutter 0;
+    margin: @padding-small 0;
     input[type="submit"] {
         display: none;
     }
     input[type="search"] {
-        padding: @gutter/2;
+        padding: @padding-small/2;
         outline: 0;
-        border: 1px solid @color-silver;
+        font-size: @font-size;
+        color: @color-off-black;
+        border: @border-width solid transparent;
+        border-radius: @border-radius;
+        box-shadow: @shadow;
+        .transition(.4s ease border);
         &:focus, &:active {
             border-color: @color-grey;
         }
@@ -425,13 +451,12 @@ a img {
 }
 
 #footer {
-    border-top: 1px solid @color-light-grey;
-    color: @color-silver;
+    color: @color-grey;
     text-align: center;
-    padding: @gutter 0;
+    padding: @padding 0;
     .copyright {
         text-align: right;
-        margin: @gutter 0;
+        margin: @padding-small 0;
     }
 }
 
@@ -440,17 +465,14 @@ a img {
    Responsive
    -------------------------------------------------------------- */
 
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 1199px) {
 
 }
 
-/* Medium Devices, Desktops */
 @media only screen and (max-width : 991px) {
     
 }
 
-/* Small Devices, Phones */ 
 @media only screen and (max-width : 767px) {
     #primary-menu {
         display: none;
@@ -458,25 +480,25 @@ a img {
     .hamburger {
         display: block;
     }
-    footer {
-        p {
+    #footer {
+        .copyright {
             text-align: left;
         }
     }
 }
 
-/* Small Phones */ 
+@media only screen and (max-width : 575px) {
+
+}
+
 @media only screen and (max-width : 479px) {
 
 }
 
-/* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
 
 }
 
-/* Retina */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
 }
-
