@@ -1,3 +1,3 @@
-![Cornerstone](img/logo.png)
+# Cornerstone
 
 A lightweight starter theme for Wordpress development.
