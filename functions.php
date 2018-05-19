@@ -222,17 +222,12 @@ function mce_buttons($buttons) {
 // Setup Theme
 
 function setup_theme() {
-    // Add custom image sizes
 
     // add_image_size( 'banner', 1920, 1080, true );
-    
-    // Register menus
 
     register_nav_menus(array(
         'primary' => __( 'Primary Menu', 'cornerstone' )
     ));
-
-    // Add theme support
 
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
@@ -244,6 +239,8 @@ function setup_theme() {
         'caption',
         'widgets'
     ));
+
+    add_editor_style();
 
 } add_action('after_setup_theme', 'setup_theme');
 
