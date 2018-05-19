@@ -34,6 +34,11 @@
                     <nav id="primary-menu">
                         <?php primary_menu(); ?>
                     </nav>
+                    <a id="hamburger" href="javascript:void(0)">
+                        <div class="menu-bar bar-1"></div>
+                        <div class="menu-bar bar-2"></div>
+                        <div class="menu-bar bar-3"></div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -41,12 +46,6 @@
         <nav id="mobile-menu">
             <?php primary_menu(); ?>
         </nav>
-
-        <a href="javascript:void(0)" class="hamburger"> 
-            <div class="menu-bar bar-1"></div>
-            <div class="menu-bar bar-2"></div>
-            <div class="menu-bar bar-3"></div>
-        </a>
 
     </header>
 

@@ -3,9 +3,9 @@
 
     // Toggle mobile menu
 
-	$(".hamburger").on('click', function () {
+	$("#hamburger").on('click', function () {
         $("#mobile-menu").toggleClass('active');
-        $(".hamburger").toggleClass("active");
+        $("#hamburger").toggleClass("active");
         return false;
     });
 

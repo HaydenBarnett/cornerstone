@@ -2,15 +2,14 @@
    Hamburger
    -------------------------------------------------------------- */
 
-.hamburger {
+#hamburger {
     z-index: 999999;
     position: absolute;
     display: none;
     height: 30px;
     width: 25px;
     top: 22px;
-    right: 20px;
-
+    right: @gutter;
     @media (max-width: 767px) {
         display: block;
     }
