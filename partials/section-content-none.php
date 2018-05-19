@@ -1,7 +1,7 @@
 <section id="post-404">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-12">
                 <div class="page-title">
                     <h1>Nothing found</h1>
                 </div>

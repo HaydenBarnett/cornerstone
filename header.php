@@ -24,25 +24,18 @@
     <header id="header">
 
         <div class="container">
-
             <div class="row">
-
-                <div class="col-md-12">
-
+                <div class="col-12">
                     <div class="branding">
                         <a href="<?php echo esc_url(home_url('/')); ?>">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="<?php bloginfo("name"); ?>">
                         </a>
                     </div>
-
                     <nav id="primary-menu">
                         <?php primary_menu(); ?>
                     </nav>
-
                 </div>
-
             </div>
-
         </div>
 
         <nav id="mobile-menu">
