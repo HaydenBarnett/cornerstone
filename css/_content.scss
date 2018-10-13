@@ -7,8 +7,8 @@
 }
 
 section {
-    padding: @padding-lg 0;
-    border-bottom: @border-width solid @color-light-grey;
+    padding: $padding-lg 0;
+    border-bottom: $border-width solid $color-light-grey;
 
     &.section-title {
         h1 {
@@ -19,13 +19,13 @@ section {
     .page-title,
     .post-title,
     .excerpt-title {
-        padding-bottom: @padding;
+        padding-bottom: $padding;
         h1 {
             margin: 0;
         }
         time {
-            margin-top: @padding-sm;
-            color: @color-dark-grey;
+            margin-top: $padding-sm;
+            color: $color-dark-grey;
         }
     }
 

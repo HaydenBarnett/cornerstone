@@ -30,16 +30,16 @@
 }
 
 .delay-1 {
-    .animation-delay(.2s);
+    @include animation-delay(.2s);
 }
 .delay-2 {
-    .animation-delay(.4s);
+    @include animation-delay(.4s);
 }
 .delay-3 {
-    .animation-delay(.6s);
+    @include animation-delay(.6s);
 }
 .delay-4 {
-    .animation-delay(.8s);
+    @include animation-delay(.8s);
 }
 
 

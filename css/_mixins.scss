@@ -2,15 +2,15 @@
    Mixins
    -------------------------------------------------------------- */
 
-.transition(@transition: 0.4s ease all) {
-    -webkit-transition: @transition;  
-    -moz-transition:    @transition;
-    -ms-transition:     @transition;
-    -o-transition:      @transition;
-    transition:         @transition; 
+@mixin transition($transition: 0.4s ease all) {
+    -webkit-transition: $transition;  
+    -moz-transition:    $transition;
+    -ms-transition:     $transition;
+    -o-transition:      $transition;
+    transition:         $transition; 
 }
 
-.background-cover() {
+@mixin background-cover {
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -19,7 +19,7 @@
     background-size: cover;
 }
 
-.background-contain() {
+@mixin background-contain {
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: contain;
@@ -28,7 +28,7 @@
     background-size: contain;
 }
 
-.animation-delay(@delay) {
-    -webkit-animation-delay: @delay;
-    animation-delay: @delay;
+@mixin animation-delay($delay) {
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
 }

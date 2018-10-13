@@ -4,22 +4,22 @@
 
 .pagination {
 	.page-numbers {
-		padding: @padding-sm/2 @padding-sm;
+		padding: $padding-sm/2 $padding-sm;
 		font-weight: 600;
-		border: @border-width solid @color-light-grey;
+		border: $border-width solid $color-light-grey;
 		display: inline-block;
-		border-radius: @border-radius;
-		box-shadow: @shadow;
-		.transition(.4s ease all);
+		border-radius: $border-radius;
+		box-shadow: $shadow;
+		transition: .4s all;
 		&.current {
 			box-shadow: none;
-			background-color: @color-off-white;
+			background-color: $color-off-white;
 			&:hover {
-				border-color: @color-light-grey;
+				border-color: $color-light-grey;
 			}
 		}
 		&:hover {
-			border-color: @color-grey;
+			border-color: $color-grey;
 		}
 	}
 }

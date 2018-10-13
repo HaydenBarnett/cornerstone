@@ -4,8 +4,8 @@
 
 #header {
     position: relative;
-    background-color: @color-white;
-    border-bottom: @border-width solid @color-light-grey;
+    background-color: $color-white;
+    border-bottom: $border-width solid $color-light-grey;
     .branding {
         float: left;
         a {
@@ -38,13 +38,13 @@
             position: relative;
             display: inline-block;
             a {
-                color: @color-off-black;
+                color: $color-off-black;
                 font-size: 14px;
                 font-weight: 600;
                 display: inline-block;
                 padding: 26px 20px;
                 &:hover, &:active, &:focus {
-                    color: @color-blue;
+                    color: $color-blue;
                 }
             }
             &:hover {
@@ -54,7 +54,7 @@
             }
             &.current_page_item {
                 > a {
-                    color: @color-blue;    
+                    color: $color-blue;    
                 }
             }
             ul {
@@ -63,10 +63,10 @@
                 top: 100%;
                 left: 0;
                 margin-top: -10px;
-                background-color: @color-white;
+                background-color: $color-white;
                 width: 175px;
-                border-radius: @border-radius-lg;
-                box-shadow: @shadow;
+                border-radius: $border-radius-lg;
+                box-shadow: $shadow;
                 li {
                     display: block;
                     width: 100%;
@@ -74,7 +74,7 @@
                         display: block;
                         width: 100%;
                         padding: 15px 20px;
-                        border-bottom: @border-width solid @color-off-white;
+                        border-bottom: $border-width solid $color-off-white;
                     }
                     &:last-child {
                         a {
@@ -88,12 +88,12 @@
 }
 
 #mobile-menu {
-    background-color: @color-blue;
+    background-color: $color-blue;
     position: absolute;
     width: 100%;
     z-index: 1000;
     display: none;
-    box-shadow: @shadow;
+    box-shadow: $shadow;
     &.active {
         display: block;
     }
@@ -105,11 +105,11 @@
             display: block;
             a {
                 display: block;
-                padding: @padding-sm;
-                color: @color-white;
-                border-top: @border-width solid fade(@color-white, 10%);
+                padding: $padding-sm;
+                color: $color-white;
+                border-top: $border-width solid fade($color-white, 10%);
                 &:hover, &:active, &:focus {
-                    background-color: fade(@color-white, 10%);
+                    background-color: fade($color-white, 10%);
                 }
             }
         }

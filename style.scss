@@ -1,0 +1,33 @@
+/*!
+    Theme Name: Cornerstone
+    Theme URI: http://github.com/haydenbarnett/cornerstone
+    Description: A lightweight starter theme for WordPress developers
+    Version: 1.0.0
+    Author: Hayden Barnett
+    Author URI: http://haydenbarnett.com/
+    Tags: 
+
+    License: CC0
+    License URI: https://creativecommons.org/publicdomain/zero/1.0/
+*/
+
+@import "css/variables";
+@import "css/mixins";
+
+@import "css/normalize";
+@import "css/basics";
+@import "css/bootstrap-grid";
+@import "css/animate";
+
+@import "css/typography";
+@import "css/utilities";
+@import "css/wordpress";
+
+@import "css/header";
+@import "css/content";
+@import "css/footer";
+
+@import "css/hamburger";
+@import "css/pagination";
+
+@import "css/responsive";
