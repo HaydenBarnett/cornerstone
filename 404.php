@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-    <?php get_template_part( 'partials/section-404' ); ?>
+    <?php include locate_template('partials/blocks/block-404.php'); ?>
 
 <?php get_footer(); ?>

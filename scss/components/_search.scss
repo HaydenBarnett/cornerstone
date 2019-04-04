@@ -1,0 +1,25 @@
+/* --------------------------------------------------------------
+   Search
+   -------------------------------------------------------------- */
+
+.search-form {
+    text-align: left;
+    margin: $padding-md 0;
+    input[type="submit"] {
+        display: none;
+    }
+    input[type="search"] {
+        padding: $padding-sm $padding-md;
+        outline: 0;
+        font-size: $font-size;
+        color: $color-off-black;
+        border: $border-width solid transparent;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        transition: .4s border, .4s box-shadow;
+        &:focus, &:active {
+            border-color: $color-light-blue;
+            box-shadow: $shadow-hover;
+        }
+    }
+}

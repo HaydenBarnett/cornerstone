@@ -11,23 +11,39 @@
     License URI: https://creativecommons.org/publicdomain/zero/1.0/
 */
 
-@import "css/variables";
-@import "css/mixins";
+@import "scss/variables";
+@import "scss/mixins";
 
-@import "css/normalize";
-@import "css/basics";
-@import "css/bootstrap-grid";
-@import "css/animate";
+// Libraries
 
-@import "css/typography";
-@import "css/utilities";
-@import "css/wordpress";
+@import "scss/lib/normalize";
+@import "scss/lib/basics";
+@import "scss/lib/bootstrap-grid";
+@import "scss/lib/animate";
 
-@import "css/header";
-@import "css/content";
-@import "css/footer";
+// Common
 
-@import "css/hamburger";
-@import "css/pagination";
+@import "scss/common/typography";
+@import "scss/common/utilities";
+@import "scss/common/wordpress";
 
-@import "css/responsive";
+// Components
+
+@import "scss/components/hamburger";
+@import "scss/components/logo";
+@import "scss/components/symbol";
+@import "scss/components/menu-mobile";
+@import "scss/components/menu-primary";
+@import "scss/components/menu-footer";
+@import "scss/components/pagination";
+@import "scss/components/search";
+
+// Blocks
+
+@import "scss/blocks/block-common";
+@import "scss/blocks/block-header";
+@import "scss/blocks/block-hero";
+@import "scss/blocks/block-pagination";
+@import "scss/blocks/block-footer";
+
+// Templates

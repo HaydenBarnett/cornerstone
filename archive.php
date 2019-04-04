@@ -1,20 +1,20 @@
 <?php get_header(); ?>
 
-    <?php get_template_part('partials/section-title', 'archive'); ?>
+    <?php include locate_template('partials/blocks/block-hero-archive.php'); ?>
 
     <?php if ( have_posts() ) : ?>
     	
         <?php while ( have_posts() ) : the_post(); ?>
 
-            <?php get_template_part('partials/section-excerpt', 'post'); ?>
+            <?php include locate_template('partials/blocks/block-post-excerpt.php'); ?>
 
         <?php endwhile; ?>
 
-        <?php get_template_part('partials/section-pagination'); ?>
+        <?php include locate_template('partials/blocks/block-pagination.php'); ?>
 
     <?php else: ?>
 
-        <?php get_template_part('partials/section-content', 'none'); ?>
+        <?php include locate_template('partials/blocks/block-content-none.php'); ?>
 
     <?php endif; ?>
     

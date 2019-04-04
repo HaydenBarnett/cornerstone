@@ -1,0 +1,133 @@
+/* --------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------- */
+
+::-moz-selection { background: $color-grey; }
+::selection { background: $color-grey; }
+
+html {
+    color: $color-off-black;
+}
+
+body {
+    background-color: $color-white;
+    font-family: $font-family-primary;
+    font-size: $font-size;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    color: $color-black;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.6em;
+}
+
+h3 {
+    font-size: 2.2em;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+a {
+    color: $color-blue;
+    text-decoration: none;
+    transition: .4s color;
+    &:visited {
+        color: $color-blue;
+        text-decoration: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-dark-blue;
+    }
+}
+
+p {
+    font-size: $font-size;
+    line-height: 2em;
+    margin: 0 0 1em;
+}
+
+blockquote {
+	font-size: 30px;
+	line-height: 1.4em;
+	max-width: 800px;
+	color: $color-dark-grey;
+	margin: $padding 0;
+	padding-left: $padding;
+	border-left: 5px solid $color-light-grey;
+	p {
+		font-size: 30px;
+		line-height: 1.4em;
+	}
+}
+
+hr {
+    background-color: $color-grey;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $font-family-primary;
+}
+
+
+/* --------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------- */
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+    
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 575px) {
+
+}
+
+@media (max-width: 479px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+}

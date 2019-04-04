@@ -1,0 +1,65 @@
+/* --------------------------------------------------------------
+   Blocks - Common
+   -------------------------------------------------------------- */
+
+.block {
+    position: relative;
+
+    // Sizes
+
+    &.block-xs {
+        padding: $padding-xs 0;
+    }
+    &.block-sm {
+        padding: $padding-sm 0;
+    }
+    &.block-md {
+        padding: $padding-md 0;
+    }
+    &.block-lg {
+        padding: $padding-lg 0;
+    }
+    &.block-xl {
+        padding: $padding-xl 0;
+    }
+
+    // Borders
+
+    &.block-border {
+        border-top: $border;
+        border-bottom: $border;
+    }
+
+    &.block-border-top {
+        border-top: $border;
+    }
+
+    &.block-border-bottom {
+        border-bottom: $border;
+    }
+
+    // Colours
+
+    &.block-alternate {
+        background-color: $color-off-white;
+    }
+
+    // Elements
+
+    .block-title {
+        margin: $padding-md 0;
+        h1, h2 {
+            margin: 0;
+        }
+        time {
+            color: $color-dark-grey;
+            margin-top: $padding-sm;
+            display: inline-block;
+        }
+    }
+
+    .block-content {
+        //
+    }
+    
+}

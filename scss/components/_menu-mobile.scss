@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------
+   Menus
+   -------------------------------------------------------------- */
+
+#mobile-menu {
+    background-color: $color-blue;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+    box-shadow: $shadow;
+    &.active {
+        display: block;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: block;
+            a {
+                display: block;
+                padding: $padding-sm;
+                color: $color-white;
+                border-top: $border-width solid fade($color-white, 10%);
+                &:hover, &:active, &:focus {
+                    background-color: fade($color-white, 10%);
+                }
+            }
+        }
+    }
+}

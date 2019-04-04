@@ -37,3 +37,5 @@ Thumbs.db
 !README.md
 !CHANGELOG.md
 !composer.json
+
+node_modules

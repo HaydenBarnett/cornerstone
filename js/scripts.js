@@ -1,9 +1,9 @@
 (function ($) {
-	"use strict"
+    "use strict"
 
     // Toggle mobile menu
 
-	$("#hamburger").on('click', function () {
+    $("#hamburger").on('click', function () {
         $("#mobile-menu, #hamburger").toggleClass('active');
         return false;
     });
