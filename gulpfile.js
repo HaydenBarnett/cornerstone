@@ -14,4 +14,4 @@ function styles(cb) {
 
 exports.default = series(styles);
 
-watch(["style.scss", "scss/**/*.scss"], styles);
+watch(["style.scss", "assets/scss/**/*.scss"], styles);

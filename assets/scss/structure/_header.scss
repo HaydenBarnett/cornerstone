@@ -2,7 +2,13 @@
    Header
    -------------------------------------------------------------- */
 
-.block.block-header {
+#header {
     background-color: $color-white;
-    border-bottom: $border-width solid $color-light-grey;
+    .logo {
+        float: left;
+        padding: $padding-sm 0;
+        @media (max-width: 767px) {
+            padding: $padding-xs 0;
+        }
+    }
 }

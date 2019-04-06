@@ -10,6 +10,6 @@
 
     <?php include locate_template('partials/analytics/analytics-body.php'); ?>
 
-    <?php include locate_template('partials/blocks/block-header.php'); ?>
-
-    <div id="content">
+    <?php include locate_template('partials/structure/header.php'); ?>
+    
+    <main id="main">

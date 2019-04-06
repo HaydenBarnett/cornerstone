@@ -1,8 +1,4 @@
-/* --------------------------------------------------------------
-   Hamburger
-   -------------------------------------------------------------- */
-
-#hamburger {
+.nav-hamburger {
     z-index: 999999;
     position: absolute;
     display: none;
@@ -10,12 +6,15 @@
     width: 25px;
     top: 16px;
     right: $gutter;
+    padding: 0;
+    border: 0;
+    background: transparent;
 
     @media (max-width: 767px) {
         display: block;
     }
 
-    .menu-bar {
+    .bar {
         position: absolute;
         width: 25px;
         height: 2px;
@@ -34,7 +33,7 @@
     }
 
     &.active {
-        .menu-bar {
+        .bar {
             background-color: $color-blue;
         }
         .bar-1 {

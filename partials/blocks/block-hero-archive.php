@@ -1,4 +1,4 @@
-<div class="block block-hero block-lg block-alternate block-border-bottom">
+<div class="block block--hero block-lg block-alternate block-border-bottom">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-    <?php if ( have_posts() ) : ?>
+    <?php if (have_posts()): ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while (have_posts()): the_post(); ?>
 
             <?php include locate_template('partials/blocks/block-post-excerpt.php'); ?>
 
@@ -12,7 +12,7 @@
 
     <?php else: ?>
 
-        <?php include locate_template('partials/blocks/block-content-none.php'); ?>
+        <?php include locate_template('partials/blocks/block-noresults.php'); ?>
 
     <?php endif; ?>
     

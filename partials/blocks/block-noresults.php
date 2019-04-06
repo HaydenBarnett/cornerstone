@@ -1,4 +1,4 @@
-<div class="block block-content block-xl">
+<div class="block block--noresults block-xl">
     <div class="container">
         <div class="row">
             <div class="col-12">

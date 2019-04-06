@@ -1,7 +1,6 @@
 <?php
-
 /* --------------------------------------------------------------
-   Menus
+   Functions - Menus
    -------------------------------------------------------------- */
 
 function get_menu_by_location($location) {
@@ -47,10 +46,10 @@ function get_menu_args($location) {
     return $args;
 }
 
-function primary_menu() {
+function nav_primary() {
     wp_nav_menu(get_menu_args('primary'));
 }
 
-function footer_menu() {
+function nav_footer() {
     wp_nav_menu(get_menu_args('footer'));
 }

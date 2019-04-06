@@ -80,11 +80,18 @@ blockquote {
 	color: $color-dark-grey;
 	margin: $padding 0;
 	padding-left: $padding;
-	border-left: 5px solid $color-light-grey;
+	border-left: 5px solid $color-blue;
 	p {
 		font-size: 30px;
-		line-height: 1.4em;
-	}
+        line-height: 1.4em;
+        font-style: italic;
+        margin: 0;
+    }
+    cite {
+        font-size: $font-size;
+        font-style: normal;
+        display: block;
+    }
 }
 
 hr {

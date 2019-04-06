@@ -11,39 +11,46 @@
     License URI: https://creativecommons.org/publicdomain/zero/1.0/
 */
 
-@import "scss/variables";
-@import "scss/mixins";
+@import "assets/scss/variables";
+@import "assets/scss/mixins";
 
 // Libraries
 
-@import "scss/lib/normalize";
-@import "scss/lib/basics";
-@import "scss/lib/bootstrap-grid";
-@import "scss/lib/animate";
+@import "assets/scss/lib/normalize";
+@import "assets/scss/lib/basics";
+@import "assets/scss/lib/bootstrap-grid";
+@import "assets/scss/lib/animate";
 
 // Common
 
-@import "scss/common/typography";
-@import "scss/common/utilities";
-@import "scss/common/wordpress";
+@import "assets/scss/common/typography";
+@import "assets/scss/common/utilities";
+@import "assets/scss/common/wordpress";
+// @import buttons
+// @import inputs
 
 // Components
 
-@import "scss/components/hamburger";
-@import "scss/components/logo";
-@import "scss/components/symbol";
-@import "scss/components/menu-mobile";
-@import "scss/components/menu-primary";
-@import "scss/components/menu-footer";
-@import "scss/components/pagination";
-@import "scss/components/search";
+@import "assets/scss/components/logo";
+@import "assets/scss/components/symbol";
+@import "assets/scss/components/nav-hamburger";
+@import "assets/scss/components/nav-primary";
+@import "assets/scss/components/nav-footer";
+@import "assets/scss/components/nav-mobile";
+@import "assets/scss/components/search-form";
+@import "assets/scss/components/pagination";
 
 // Blocks
 
-@import "scss/blocks/block-common";
-@import "scss/blocks/block-header";
-@import "scss/blocks/block-hero";
-@import "scss/blocks/block-pagination";
-@import "scss/blocks/block-footer";
+@import "assets/scss/blocks/block-common";
+@import "assets/scss/blocks/block-hero";
+@import "assets/scss/blocks/block-pagination";
+
+// Structure
+
+@import "assets/scss/structure/header";
+@import "assets/scss/structure/footer";
 
 // Templates
+
+// @import "assets/scss/templates/template-home";

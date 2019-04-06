@@ -1,4 +1,4 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class('block block-lg'); ?>>
+<div class="block block--page block-lg">
     <div class="container">
         <div class="row">
             <div class="col-12">
