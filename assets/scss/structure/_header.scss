@@ -3,7 +3,9 @@
    -------------------------------------------------------------- */
 
 #header {
+    position: relative;
     background-color: $color-white;
+    border-bottom: $border;
     .logo {
         float: left;
         padding: $padding-sm 0;

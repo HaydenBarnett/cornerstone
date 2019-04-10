@@ -10,7 +10,7 @@
 
     <?php include locate_template('partials/analytics/analytics-body.php'); ?>
 
-    <header id="header" class="block block-border-bottom">
+    <header id="header">
         <div class="container">
             <div class="row">
                 <div class="col-12">

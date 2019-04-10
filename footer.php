@@ -1,6 +1,6 @@
     </main><!-- #main -->
     
-    <footer id="footer" class="block block-lg">
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
