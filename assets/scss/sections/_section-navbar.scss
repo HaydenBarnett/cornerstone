@@ -1,13 +1,16 @@
 /* --------------------------------------------------------------
-   Footer
+   Navbar
    -------------------------------------------------------------- */
 
-#footer {
+.navbar {
     position: relative;
-    padding: $padding-lg 0;
-    color: $color-grey;
-    background-color: $color-off-black;
-    .symbol {
+    background-color: $color-white;
+    border-bottom: $border;
+    .logo {
+        float: left;
         padding: $padding-sm 0;
+        @media (max-width: 767px) {
+            padding: $padding-xs 0;
+        }
     }
 }

@@ -1,52 +1,52 @@
 /* --------------------------------------------------------------
-   Blocks - Common
+   Sections - Common
    -------------------------------------------------------------- */
 
-.block {
+.section {
     position: relative;
 
     // Sizes
 
-    &.block-xs {
+    &.section-xs {
         padding: $padding-xs 0;
     }
-    &.block-sm {
+    &.section-sm {
         padding: $padding-sm 0;
     }
-    &.block-md {
+    &.section-md {
         padding: $padding-md 0;
     }
-    &.block-lg {
+    &.section-lg {
         padding: $padding-lg 0;
     }
-    &.block-xl {
+    &.section-xl {
         padding: $padding-xl 0;
     }
 
     // Borders
 
-    &.block-border {
+    &.section-border {
         border-top: $border;
         border-bottom: $border;
     }
 
-    &.block-border-top {
+    &.section-border-top {
         border-top: $border;
     }
 
-    &.block-border-bottom {
+    &.section-border-bottom {
         border-bottom: $border;
     }
 
     // Colours
 
-    &.block-alternate {
+    &.section-alternate {
         background-color: $color-off-white;
     }
 
     // Elements
 
-    .block-title {
+    .title {
         margin: $padding-md 0;
         h1, h2 {
             margin: 0;
@@ -69,7 +69,7 @@
         }
     }
 
-    .block-content {
+    .content {
         //
     }
     

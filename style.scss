@@ -40,16 +40,13 @@
 @import "assets/scss/components/search-form";
 @import "assets/scss/components/pagination";
 
-// Blocks
+// Sections
 
-@import "assets/scss/blocks/block-common";
-@import "assets/scss/blocks/block-hero";
-@import "assets/scss/blocks/block-pagination";
-
-// Structure
-
-@import "assets/scss/structure/header";
-@import "assets/scss/structure/footer";
+@import "assets/scss/sections/section-common";
+@import "assets/scss/sections/section-navbar";
+@import "assets/scss/sections/section-hero";
+@import "assets/scss/sections/section-pagination";
+@import "assets/scss/sections/section-footer";
 
 // Templates
 

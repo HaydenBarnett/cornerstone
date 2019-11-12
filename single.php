@@ -2,7 +2,7 @@
 
     <?php while (have_posts()): the_post(); ?>
 
-        <?php include locate_template('partials/blocks/block-post.php'); ?>
+        <?php include locate_template('partials/sections/section-post.php'); ?>
 
     <?php endwhile; ?>
     
