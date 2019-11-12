@@ -17,10 +17,15 @@
 
 //  Hide yoast for defined custom post types
 
-/* 
-function yoast_is_toast(){
-    if (!current_user_can('activate_plugins')) {
-        remove_meta_box('wpseo_meta', 'custom_post_type', 'normal');
-    }
-} add_action('add_meta_boxes', 'yoast_is_toast', 99); 
-*/
+// function yoast_is_toast(){
+//     if (!current_user_can('activate_plugins')) {
+//         remove_meta_box('wpseo_meta', 'custom_post_type', 'normal');
+//     }
+// } add_action('add_meta_boxes', 'yoast_is_toast', 99); 
+
+
+// Gravity forms custom spinnner
+
+// function spinner_url( $image_src, $form ) {
+//     return 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+// } add_filter( 'gform_ajax_spinner_url', 'spinner_url', 10, 2 );
