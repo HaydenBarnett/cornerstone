@@ -4,17 +4,6 @@
     width: device-width;
 }
 
-*, 
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-html {
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
-}
-
 body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
