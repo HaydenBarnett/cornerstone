@@ -4,15 +4,15 @@
 
         <?php while (have_posts()): the_post(); ?>
 
-            <?php include locate_template('partials/blocks/block-post-excerpt.php'); ?>
+            <?php include locate_template('partials/sections/section-post-excerpt.php'); ?>
 
         <?php endwhile; ?>
 
-        <?php include locate_template('partials/blocks/block-pagination.php'); ?>
+        <?php include locate_template('partials/sections/section-pagination.php'); ?>
 
     <?php else: ?>
 
-        <?php include locate_template('partials/blocks/block-noresults.php'); ?>
+        <?php include locate_template('partials/sections/section-noresults.php'); ?>
 
     <?php endif; ?>
     

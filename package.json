@@ -2,13 +2,14 @@
   "name": "cornerstone",
   "version": "1.0.0",
   "description": "A lightweight starter theme for Wordpress development.",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch style.scss --output-style compressed -o ./"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HaydenBarnett/cornerstone.git"
+    "url": "git+https://haydenbarnett@github.com/HaydenBarnett/cornerstone.git"
   },
   "author": "",
   "license": "ISC",
@@ -16,11 +17,7 @@
     "url": "https://github.com/HaydenBarnett/cornerstone/issues"
   },
   "homepage": "https://github.com/HaydenBarnett/cornerstone#readme",
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2"
+  "dependencies": {
+    "node-sass": "^4.13.0"
   }
 }

@@ -1,19 +1,14 @@
 <?php
 
-$template_directory = get_template_directory();
+$directory = get_template_directory() . '/functions';
 
-require_once $template_directory . '/partials/functions/function-common.php';
-
-require_once $template_directory . '/partials/functions/function-plugins.php';
-
-require_once $template_directory . '/partials/functions/function-menus.php';
-
-require_once $template_directory . '/partials/functions/function-widgets.php';
-
-require_once $template_directory . '/partials/functions/function-posts.php';
-
-require_once $template_directory . '/partials/functions/function-setup.php';
-
-require_once $template_directory . '/partials/functions/function-scripts.php';
+include $directory . '/functions-common.php';
+include $directory . '/functions-plugins.php';
+include $directory . '/functions-acf-blocks.php';
+include $directory . '/functions-menus.php';
+include $directory . '/functions-widgets.php';
+include $directory . '/functions-posts.php';
+include $directory . '/functions-setup.php';
+include $directory . '/functions-scripts.php';
 
 ?>

@@ -1,16 +1,13 @@
 /* --------------------------------------------------------------
-   Header
+   Footer
    -------------------------------------------------------------- */
 
-#header {
+.footer {
     position: relative;
-    background-color: $color-white;
-    border-bottom: $border;
-    .logo {
-        float: left;
+    padding: $padding-lg 0;
+    color: $color-grey;
+    background-color: $color-off-black;
+    .symbol {
         padding: $padding-sm 0;
-        @media (max-width: 767px) {
-            padding: $padding-xs 0;
-        }
     }
 }

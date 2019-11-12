@@ -93,6 +93,14 @@ function mce_buttons($buttons) {
 } add_filter('mce_buttons_2', 'mce_buttons');
 
 
+// Allow svg uploads
+
+function allow_svg_uploads($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+} add_filter('upload_mimes', 'allow_svg_uploads');
+
+
 // Setup Theme
 
 function setup_theme() {

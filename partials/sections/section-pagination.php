@@ -1,6 +1,6 @@
 <?php if (is_paginated()): ?>
 
-<div class="block block--pagination block-md block-border-top">
+<div class="section section-pagination section-md section-border-top">
     <div class="container">
         <div class="row">
             <div class="col-12">
