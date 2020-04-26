@@ -1,0 +1,19 @@
+.wp-block-latest-posts {
+    padding: 0;
+    > li {
+        border-radius: $border-radius;
+        padding: 2rem 2.5rem;
+        border: $border;
+    }
+}
+
+.wp-block-latest-posts__featured-image {
+    margin-bottom: 1rem;
+    img {
+        border-radius: $border-radius;
+    }
+}
+
+.wp-block-latest-posts__post-excerpt {
+    margin-bottom: 0;
+}

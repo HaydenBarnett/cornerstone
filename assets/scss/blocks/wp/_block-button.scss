@@ -1,0 +1,55 @@
+// TODO: add correct colour customisation - primary default + secondary options etc
+
+.wp-block-button__link {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 100px;
+    font-size: $font-size-lg;
+    line-height: 1.1em;
+    font-weight: 700;
+    min-height: 50px;
+    text-align: center;
+    padding: 1.1em 1.44em;
+    transition: 0.2s ease border, 0.2s ease background-color, 0.2s ease color;
+    outline: 0;
+    border: 0;
+    @media (max-width: 991px) {
+        font-size: $font-size-md;
+        min-height: 40px;
+        padding: 1rem 1.5rem;
+    }
+}
+
+.btn-block {
+    display: block;
+}
+
+.btn-primary {
+    color: $color-white;
+    background-color: $color-blue;
+    &:visited {
+        color: $color-white;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-white;
+        background-color: $color-dark-blue;
+    }
+}
+
+.btn-secondary {
+    color: $color-blue;
+    background-color: $color-off-white;
+    &:visited {
+        color: $color-blue;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-dark-blue;
+        background-color: $color-light-grey;
+    }
+}

@@ -9,6 +9,8 @@
     padding: 0;
     border: 0;
     background: transparent;
+    outline: 0;
+    cursor: pointer;
 
     @media (max-width: 767px) {
         display: block;
@@ -19,7 +21,7 @@
         width: 25px;
         height: 2px;
         background-color: $color-off-black;
-        transition: .3s all;
+        transition: .2s all;
     }
 
     .bar-1 {
@@ -42,6 +44,8 @@
         }
         .bar-2 {
             opacity: 0;
+            -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
         }
         .bar-3 {
             -webkit-transform: translateY(-8px) rotate(-45deg);

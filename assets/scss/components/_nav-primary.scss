@@ -14,12 +14,13 @@
             position: relative;
             display: inline-block;
             a {
-                color: $color-off-black;
-                font-size: $font-size-sm;
-                font-weight: 600;
+                color: $color-dark-grey;
+                font-size: $font-size;
+                font-weight: 400;
                 display: inline-block;
                 margin: 0 $padding-sm;
                 padding: 28px 0px;
+                border: 0;
                 &:hover, &:active, &:focus {
                     color: $color-blue;
                 }
@@ -31,7 +32,7 @@
             }
             &.current_page_item {
                 > a {
-                    color: $color-blue;    
+                    color: $color-black;    
                 }
             }
             ul {
@@ -43,7 +44,7 @@
                 background-color: $color-white;
                 width: 175px;
                 border-radius: $border-radius-lg;
-                box-shadow: $shadow;
+                box-shadow: $box-shadow;
                 li {
                     display: block;
                     width: 100%;

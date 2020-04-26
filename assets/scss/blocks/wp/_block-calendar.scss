@@ -1,0 +1,12 @@
+.wp-block-calendar {
+    margin: 3rem 0;
+    .wp-calendar-table {
+        caption {
+            font-size: $font-size-xl;
+            margin: 1em 0;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}

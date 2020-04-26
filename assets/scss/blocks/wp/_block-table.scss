@@ -1,0 +1,29 @@
+.wp-block-table {
+    font-size: $font-size-lg;
+    margin: 1rem 0;
+    table {
+        background-color: $color-white!important;
+        border-spacing: 0;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+    td {
+        color: $color-dark-grey;
+        border-bottom: $border;
+    }
+    thead {
+        background-color: $color-light-grey;
+        th {
+            font-size: $font-size-xl;
+        }
+    }
+    tbody {
+
+    }
+    tfoot {
+        td {
+            font-size: $font-size-sm;
+        }
+    }
+}

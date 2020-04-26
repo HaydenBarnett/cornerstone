@@ -2,19 +2,8 @@
    Utilities
    -------------------------------------------------------------- */
 
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.video-container {
+.wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper,
+.video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
@@ -29,6 +18,78 @@
     }
 }
 
+.no-select {
+	user-select: none;
+}
+
+/* --------------------------------------------------------------
+   Alignment
+   -------------------------------------------------------------- */
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.alignleft {
+    
+}
+
+.alignright {
+    
+}
+
+.aligncenter {
+    
+}
+
+.alignfull {
+	margin: $gutter*2 calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+/* --------------------------------------------------------------
+   Color
+   -------------------------------------------------------------- */
+
+.has-blue-color {
+    color: $color-blue!important;
+}
+
+.has-light-blue-color {
+    color: $color-light-blue!important;
+}
+
+.has-dark-blue-color {
+    color: $color-dark-blue!important;
+}
+
+// Background color
+
+.has-none-background-color {
+    background-color: transparent!important;
+}
+
+.has-blue-background-color {
+    background-color: $color-blue!important;
+}
+
+.has-subtle-pale-blue-background-color,
+.has-light-blue-background-color {
+    background-color: $color-light-blue!important;
+}
+
+.has-dark-blue-background-color {
+    background-color: $color-dark-blue!important;
+}
 
 /* --------------------------------------------------------------
    Accessibility
@@ -63,4 +124,78 @@
     top: 5px;
     width: auto;
     z-index: 100000;
+}
+
+
+/* --------------------------------------------------------------
+   Margin
+   -------------------------------------------------------------- */
+
+// Top & Bottom
+
+.m-none {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.m-xs {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.m-sm {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.m-md {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.m-lg {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+}
+.m-xl {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+}
+
+// Top
+
+.mt-none {
+    margin-top: 0;
+}
+.mt-xs {
+    margin-top: 1rem;
+}
+.mt-sm {
+    margin-top: 3rem;
+}
+.mt-md {
+    margin-top: 6rem;
+}
+.mt-lg {
+    margin-top: 9rem;
+}
+.mt-xl {
+    margin-top: 12rem;
+}
+
+// Bottom
+
+.mb-none {
+    margin-bottom: 0;
+}
+.mb-xs {
+    margin-bottom: 1rem;
+}
+.mb-sm {
+    margin-bottom: 3rem;
+}
+.mb-md {
+    margin-bottom: 6rem;
+}
+.mb-lg {
+    margin-bottom: 9rem;
+}
+.mb-xl {
+    margin-bottom: 12rem;
 }

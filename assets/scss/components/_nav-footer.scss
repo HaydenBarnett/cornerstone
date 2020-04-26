@@ -2,9 +2,6 @@
     position: relative;
     float: right;
     z-index: 10;
-    @media (max-width: 767px) {
-        display: none;
-    }
     ul {
         position: relative;
         list-style: none;
@@ -14,21 +11,22 @@
             position: relative;
             display: inline-block;
             a {
-                color: $color-grey;
-                font-size: $font-size-sm;
-                font-weight: 600;
+                color: $color-dark-grey;
+                font-size: $font-size;
+                font-weight: 400;
                 display: inline-block;
                 padding: 28px 0px;
                 margin: 0px $padding-sm;
+                border: 0;
                 &:hover, &:active, &:focus {
-                    color: $color-off-white;
+                    color: $color-blue;
                 }
             }
             &.current_page_item {
                 > a {
-                    color: $color-grey; 
+                    color: $color-dark-grey; 
                     &:hover, &:active, &:focus {
-                        color: $color-off-white;
+                        color: $color-blue;
                     }
                 }
             }

@@ -1,0 +1,30 @@
+div.editor-styles-wrapper {
+    color: $color-black;
+    font-size: $font-size;
+    font-family: $font-family-primary;
+    line-height: inherit;
+
+    // Blocks - remove margins
+
+    .acf-block-preview > div {
+        margin: 0!important;
+    }
+
+    // Block Yoast FAQ - fix yoast SEO block
+
+    .schema-faq-answer {
+        display: block;
+    }
+
+    // Block Stats - hide additional slider logos
+
+    .block-stats {
+        .logos {
+            overflow: hidden;
+        }
+    }
+}
+
+div.wp-block {
+    max-width: 1110px;
+}

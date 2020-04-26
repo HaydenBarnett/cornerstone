@@ -5,7 +5,7 @@
 		border: $border-width solid $color-light-grey;
 		display: inline-block;
 		border-radius: $border-radius;
-		box-shadow: $shadow;
+		box-shadow: $box-shadow;
 		transition: .4s all;
 		&.current {
 			box-shadow: none;

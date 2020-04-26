@@ -11,11 +11,11 @@
         color: $color-off-black;
         border: $border-width solid transparent;
         border-radius: $border-radius;
-        box-shadow: $shadow;
+        box-shadow: $box-shadow;
         transition: .4s border, .4s box-shadow;
         &:focus, &:active {
             border-color: $color-light-blue;
-            box-shadow: $shadow-hover;
+            box-shadow: $box-shadow-hover;
         }
     }
 }

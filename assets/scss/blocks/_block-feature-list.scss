@@ -1,0 +1,44 @@
+.block-feature-list {
+    .title {
+        text-align: center;
+    }
+}
+
+.feature {
+    margin-bottom: 6rem;
+    h3 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .icon {
+        background-color: $color-light-green;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        flex-shrink: 0;
+    }
+    &.centered {
+        h3 {
+            display: block;
+            text-align: center;
+        }
+        .icon {
+            margin: 0 auto 2rem;
+        }
+    }
+    @media (max-width: 991px) {
+        margin-bottom: 4rem;
+        .icon {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 3rem;
+    }
+}

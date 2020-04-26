@@ -1,0 +1,22 @@
+.wp-block-latest-comments {
+    padding: 0;
+    > li {
+        border-radius: $border-radius;
+        padding: 2rem 2.5rem;
+        border: $border;
+    }
+}
+
+.wp-block-latest-comments .avatar, 
+.wp-block-latest-comments__comment-avatar {
+    border-radius: $border-radius;
+}
+
+.wp-block-latest-posts__post-excerpt {
+    margin-bottom: 0;
+}
+
+.wp-block-latest-comments__comment-excerpt p {
+    font-size: $font-size-sm;
+    margin: 1em 0 0;
+}

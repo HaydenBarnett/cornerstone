@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+    .wp-block-columns {
+        display: block;
+    }
+    .wp-block-column {
+        width: 100%!important;
+    }
+    .wp-block-column:nth-child(2n) {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .wp-block-columns {
+        flex-wrap: nowrap;
+    }
+    .wp-block-column:not(:first-child) {
+        margin-left: $gutter * 2;
+    }
+}

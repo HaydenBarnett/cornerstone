@@ -2,36 +2,38 @@
    Wordress
    -------------------------------------------------------------- */
 
-// Need to add gutenberg support
-
-.alignleft {
-    
-}
-
-.alignright {
-    
-}
-
-.aligncenter {
-    
-}
-
-.wp-caption,
-.gallery-caption {
-    color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    font-style: italic;
-    margin-bottom: 1.5em;
+.site-wrapper {
+    overflow-x: hidden;
     max-width: 100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.page-content {
+    > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+        max-width: 730px; // TODO: variable
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+.page-content {
+    ul, ol {
+        margin: 1rem auto;
+        li {
+            color: $color-dark-grey;
+            font-size: $font-size-lg;
+            line-height: 1.75em;
+            margin-bottom: 1rem;
+        }
+    }
+    > div {
+        &:last-child {
+            margin-bottom: 3rem!important;
+        }
+    }
+}
+
+p {
+    &.has-background {
+        border-radius: $border-radius;
+    }
 }
