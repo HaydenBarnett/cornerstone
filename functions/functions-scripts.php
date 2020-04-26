@@ -14,6 +14,16 @@ function dequeue_jquery_migrate(&$scripts){
 } add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
 
 
+// Gutenberg
+
+function custom_gutenberg_assets() {
+    $theme = wp_get_theme();
+    $theme_version = $theme['Version'];
+    wp_enqueue_style('dm-sans-font', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap', '');
+    // wp_enqueue_style('custom-gutenberg-styles', get_template_directory_uri() . '/editor-style.css', array(), $theme_version);
+} add_action( 'enqueue_block_editor_assets', 'custom_gutenberg_assets' );
+
+
 // Queue CSS and JS
 
 function queue_scripts() {

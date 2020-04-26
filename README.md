@@ -6,8 +6,6 @@ A lightweight starter theme for Wordpress development.
 ## TODO
 
 - Content
-    - Align wide and align full
-    - Default colour selection overrides
     - ACF feature list block example
     - ACF hero block example
     - Yoast FAQ styles

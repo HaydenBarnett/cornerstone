@@ -38,24 +38,6 @@
     text-align: right;
 }
 
-.alignleft {
-    
-}
-
-.alignright {
-    
-}
-
-.aligncenter {
-    
-}
-
-.alignfull {
-	margin: $gutter*2 calc(50% - 50vw);
-	max-width: 100vw;
-	width: 100vw;
-}
-
 /* --------------------------------------------------------------
    Color
    -------------------------------------------------------------- */
@@ -64,13 +46,34 @@
     color: $color-blue!important;
 }
 
-.has-light-blue-color {
-    color: $color-light-blue!important;
+.has-white-color {
+    color: $color-white!important;
 }
 
-.has-dark-blue-color {
-    color: $color-dark-blue!important;
+.has-off-white-color {
+    color: $color-off-white!important;
 }
+
+.has-light-grey-color {
+    color: $color-light-grey!important;
+}
+
+.has-grey-color {
+    color: $color-grey!important;
+}
+
+.has-dark-grey-color {
+    color: $color-dark-grey!important;
+}
+
+.has-off-black-color {
+    color: $color-off-black!important;
+}
+
+.has-black-color {
+    color: $color-black!important;
+}
+
 
 // Background color
 
@@ -82,13 +85,32 @@
     background-color: $color-blue!important;
 }
 
-.has-subtle-pale-blue-background-color,
-.has-light-blue-background-color {
-    background-color: $color-light-blue!important;
+.has-white-background-color {
+    background-color: $color-white!important;
 }
 
-.has-dark-blue-background-color {
-    background-color: $color-dark-blue!important;
+.has-off-white-background-color {
+    background-color: $color-off-white!important;
+}
+
+.has-light-grey-background-color {
+    background-color: $color-light-grey!important;
+}
+
+.has-grey-background-color {
+    background-color: $color-grey!important;
+}
+
+.has-dark-grey-background-color {
+    background-color: $color-dark-grey!important;
+}
+
+.has-off-black-background-color {
+    background-color: $color-off-black!important;
+}
+
+.has-black-background-color {
+    background-color: $color-black!important;
 }
 
 /* --------------------------------------------------------------

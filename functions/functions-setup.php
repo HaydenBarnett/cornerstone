@@ -114,6 +114,8 @@ function setup_theme() {
 
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    // add_theme_support('responsive-embeds');
+    add_theme_support('align-wide');
     add_theme_support('html5', array(
         'search-form', 
         'comment-form', 
@@ -121,6 +123,49 @@ function setup_theme() {
         'gallery', 
         'caption',
         'widgets'
+    ));
+
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name'  => 'Blue',
+            'slug'  => 'blue',
+            'color'	=> '#005efb',
+        ),
+        array(
+            'name'  => 'White',
+            'slug'  => 'white',
+            'color'	=> '#ffffff',
+        ),
+        array(
+            'name'  => 'Off-White',
+            'slug'  => 'off-white',
+            'color'	=> '#f8f8fc',
+        ),
+        array(
+            'name'  => 'Light Grey',
+            'slug'  => 'light-grey',
+            'color'	=> '#eeeef2',
+        ),
+        array(
+            'name'  => 'Grey',
+            'slug'  => 'grey',
+            'color'	=> '#ccccd1',
+        ),
+        array(
+            'name'  => 'Dark Grey',
+            'slug'  => 'dark-grey',
+            'color'	=> '#66666b',
+        ),
+        array(
+            'name'  => 'Off-black',
+            'slug'  => 'off-black',
+            'color'	=> '#1e1e23',
+        ),
+        array(
+            'name'  => 'Black',
+            'slug'  => 'black',
+            'color'	=> '#000000',
+        ),
     ));
 
     // add_editor_style();
