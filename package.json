@@ -2,10 +2,9 @@
   "name": "cornerstone",
   "version": "1.0.0",
   "description": "A lightweight starter theme for Wordpress development.",
-  "main": "index.js",
   "scripts": {
     "css": "node-sass --output-style compressed --include-path scss style.scss style.css",
-    "watch": "nodemon -e scss -x \"npm run css\""
+    "watch": "nodemon -e scss,js --ignore js/dist/ --ignore js/lib/ -x \"npm run css\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,9 @@
     "node-sass": "^4.13.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "nodemon": "^2.0.4"
   }
 }

@@ -6,12 +6,11 @@ A lightweight starter theme for Wordpress development.
 ## TODO
 
 - Content
-    - ACF feature list block example
-    - ACF hero block example
-    - Yoast FAQ styles
+    - Editor styles
     - Template variations - title, no title
     - Blog template
-    - Editor styles
+    - Yoast FAQ styles
+    - ACF hero block example
 - Theme
     - Better primary menu child page support
     - Search & CTA in nav
@@ -19,10 +18,10 @@ A lightweight starter theme for Wordpress development.
     - Footer widgets
     - Improve footer menu
     - Comments support
+    - Customisable logo
 - Other
-    - Replace colour system with something bigger
+    - Replace colour system with something better
     - Webpack scss and js build
     - Remove build files from git
     - Replace animate.css with aos
     - Add slider library (slick)
-    - Customisable logo

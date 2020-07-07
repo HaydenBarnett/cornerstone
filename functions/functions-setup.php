@@ -29,7 +29,7 @@ function set_excerpt_more( $more ) {
 function set_login_logo() { ?> 
     <style type="text/css"> 
         #login h1 a { 
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/symbol.svg);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/symbol.svg);
             -webkit-background-size: contain;
             background-size: contain;
             height: 80px;

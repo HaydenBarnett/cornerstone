@@ -11,83 +11,83 @@
     License URI: https://creativecommons.org/publicdomain/zero/1.0/
 */
 
-@import "assets/scss/variables";
-@import "assets/scss/mixins";
+@import "scss/variables";
+@import "scss/mixins";
 
 // Libraries
 
-@import "assets/scss/lib/normalize";
-@import "assets/scss/lib/basics";
-@import "assets/scss/lib/bootstrap-grid";
-@import "assets/scss/lib/animate";
-// @import "assets/scss/lib/slick";
-// @import "assets/scss/lib/aos-core";
-// @import "assets/scss/lib/aos-easing";
-// @import "assets/scss/lib/aos-animations";
+@import "scss/lib/normalize";
+@import "scss/lib/basics";
+@import "scss/lib/bootstrap-grid";
+@import "scss/lib/animate";
+// @import "scss/lib/slick";
+// @import "scss/lib/aos-core";
+// @import "scss/lib/aos-easing";
+// @import "scss/lib/aos-animations";
 
 // Common
 
-@import "assets/scss/common/typography";
-@import "assets/scss/common/utilities";
-@import "assets/scss/common/wordpress";
-@import "assets/scss/common/inputs";
+@import "scss/common/typography";
+@import "scss/common/utilities";
+@import "scss/common/wordpress";
+@import "scss/common/inputs";
 
 // Components
 
-@import "assets/scss/components/logo";
-@import "assets/scss/components/symbol";
-@import "assets/scss/components/nav-hamburger";
-@import "assets/scss/components/nav-primary";
-@import "assets/scss/components/nav-footer";
-@import "assets/scss/components/nav-mobile";
-@import "assets/scss/components/search-form";
-@import "assets/scss/components/pagination";
+@import "scss/components/logo";
+@import "scss/components/symbol";
+@import "scss/components/nav-hamburger";
+@import "scss/components/nav-primary";
+@import "scss/components/nav-footer";
+@import "scss/components/nav-mobile";
+@import "scss/components/search-form";
+@import "scss/components/pagination";
 
 // Sections
 
-@import "assets/scss/sections/section-common";
-@import "assets/scss/sections/section-navbar";
-@import "assets/scss/sections/section-hero";
-@import "assets/scss/sections/section-pagination";
-@import "assets/scss/sections/section-footer";
+@import "scss/sections/section-common";
+@import "scss/sections/section-navbar";
+@import "scss/sections/section-hero";
+@import "scss/sections/section-pagination";
+@import "scss/sections/section-footer";
 
 // Blocks - WordPress
 
-@import "assets/scss/blocks/wp/block-audio";
-@import "assets/scss/blocks/wp/block-archives";
-@import "assets/scss/blocks/wp/block-button";
-@import "assets/scss/blocks/wp/block-calendar";
-@import "assets/scss/blocks/wp/block-categories";
-@import "assets/scss/blocks/wp/block-code";
-@import "assets/scss/blocks/wp/block-columns";
-@import "assets/scss/blocks/wp/block-cover";
-@import "assets/scss/blocks/wp/block-embed";
-@import "assets/scss/blocks/wp/block-file";
-@import "assets/scss/blocks/wp/block-gallery";
-@import "assets/scss/blocks/wp/block-group";
-@import "assets/scss/blocks/wp/block-image";
-@import "assets/scss/blocks/wp/block-latest-comments";
-@import "assets/scss/blocks/wp/block-latest-posts";
-@import "assets/scss/blocks/wp/block-media-text";
-@import "assets/scss/blocks/wp/block-preformatted";
-@import "assets/scss/blocks/wp/block-pullquote";
-@import "assets/scss/blocks/wp/block-quote";
-@import "assets/scss/blocks/wp/block-verse";
-@import "assets/scss/blocks/wp/block-video";
-@import "assets/scss/blocks/wp/block-seperator";
-@import "assets/scss/blocks/wp/block-social-links";
-@import "assets/scss/blocks/wp/block-table";
-@import "assets/scss/blocks/wp/block-tag-cloud";
+@import "scss/blocks/wp/block-audio";
+@import "scss/blocks/wp/block-archives";
+@import "scss/blocks/wp/block-button";
+@import "scss/blocks/wp/block-calendar";
+@import "scss/blocks/wp/block-categories";
+@import "scss/blocks/wp/block-code";
+@import "scss/blocks/wp/block-columns";
+@import "scss/blocks/wp/block-cover";
+@import "scss/blocks/wp/block-embed";
+@import "scss/blocks/wp/block-file";
+@import "scss/blocks/wp/block-gallery";
+@import "scss/blocks/wp/block-group";
+@import "scss/blocks/wp/block-image";
+@import "scss/blocks/wp/block-latest-comments";
+@import "scss/blocks/wp/block-latest-posts";
+@import "scss/blocks/wp/block-media-text";
+@import "scss/blocks/wp/block-preformatted";
+@import "scss/blocks/wp/block-pullquote";
+@import "scss/blocks/wp/block-quote";
+@import "scss/blocks/wp/block-verse";
+@import "scss/blocks/wp/block-video";
+@import "scss/blocks/wp/block-seperator";
+@import "scss/blocks/wp/block-social-links";
+@import "scss/blocks/wp/block-table";
+@import "scss/blocks/wp/block-tag-cloud";
 
 // Blocks - Other
 
-@import "assets/scss/blocks/block-feature-list";
-// @import "assets/scss/blocks/block-yoast-faq";
+@import "scss/blocks/block-feature-list";
+// @import "scss/blocks/block-yoast-faq";
 
 // Templates
 
-// @import "assets/scss/templates/template-home";
+// @import "scss/templates/template-home";
 
 // Editor
 
-@import "assets/scss/editor-overrides";
+@import "scss/editor-overrides";
