@@ -4,8 +4,8 @@
   "description": "A lightweight starter theme for Wordpress development.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch style.scss --output-style compressed -o ./"
+    "css": "node-sass --output-style compressed --include-path scss style.scss style.css",
+    "watch": "nodemon -e scss -x \"npm run css\""
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/HaydenBarnett/cornerstone#readme",
   "dependencies": {
     "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
