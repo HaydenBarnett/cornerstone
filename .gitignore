@@ -39,3 +39,5 @@ Thumbs.db
 !composer.json
 
 node_modules
+js/dist/*
+css/dist/*
