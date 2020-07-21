@@ -1,4 +1,4 @@
-<div class="section section-hero section-lg section-alternate section-border-bottom">
+<div class="section section-hero section-lg section-alternate">
     <div class="container">
         <div class="row">
             <div class="col-12">
