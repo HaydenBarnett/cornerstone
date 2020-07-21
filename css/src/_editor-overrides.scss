@@ -1,5 +1,5 @@
 div.editor-styles-wrapper {
-    color: $color-black;
+    color: $color-off-black;
     font-size: $font-size;
     font-family: $font-family-primary;
     line-height: inherit;
@@ -10,7 +10,7 @@ div.editor-styles-wrapper {
         margin: 0!important;
     }
 
-    // Block Yoast FAQ - fix yoast SEO block
+    // Block Yoast FAQ - always display answers
 
     .schema-faq-answer {
         display: block;
@@ -25,6 +25,10 @@ div.editor-styles-wrapper {
     }
 }
 
-div.wp-block {
-    max-width: 1110px;
+.wp-block {
+    max-width: $inner-width;
+}
+ 
+.wp-block[data-align=wide] {
+    max-width: $container-width;
 }

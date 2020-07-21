@@ -1,11 +1,10 @@
-// TODO: add correct colour customisation - primary default + secondary options etc
-
 .wp-block-button__link {
     -webkit-appearance: none;
     -moz-appearance: none;
     display: inline-block;
     cursor: pointer;
     border-radius: 100px;
+    
     font-size: $font-size-lg;
     line-height: 1.1em;
     font-weight: 700;
@@ -15,6 +14,16 @@
     transition: 0.2s ease border, 0.2s ease background-color, 0.2s ease color;
     outline: 0;
     border: 0;
+    &:not(.has-background):not(.has-text-color) {
+        color: $color-blue;
+        background-color: $color-off-white;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-blue!important;
+            background-color: $color-off-white!important;
+        }
+    }
     @media (max-width: 991px) {
         font-size: $font-size-md;
         min-height: 40px;
@@ -26,6 +35,7 @@
     display: block;
 }
 
+a.wp-block-button__link.has-white-color.has-blue-background-color,
 .btn-primary {
     color: $color-white;
     background-color: $color-blue;
@@ -35,11 +45,12 @@
     &:hover,
     &:focus,
     &:active {
-        color: $color-white;
-        background-color: $color-dark-blue;
+        color: $color-white!important;
+        background-color: $color-dark-blue!important;
     }
 }
 
+a.wp-block-button__link.has-blue-color.has-off-white-background-color,
 .btn-secondary {
     color: $color-blue;
     background-color: $color-off-white;
@@ -49,7 +60,7 @@
     &:hover,
     &:focus,
     &:active {
-        color: $color-dark-blue;
-        background-color: $color-light-grey;
+        color: $color-dark-blue!important;
+        background-color: $color-light-grey!important;
     }
 }

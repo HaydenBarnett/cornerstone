@@ -124,7 +124,7 @@ function setup_theme() {
         'caption',
         'widgets'
     ));
-
+    add_theme_support('editor-styles');
     add_theme_support('editor-color-palette', array(
         array(
             'name'  => 'Blue',
@@ -167,8 +167,6 @@ function setup_theme() {
             'color'	=> '#000000',
         ),
     ));
-
-    // add_editor_style();
 
 } add_action('after_setup_theme', 'setup_theme');
 

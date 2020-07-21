@@ -1,6 +1,7 @@
 .wp-block-image {
     margin-top: 3rem;
     margin-bottom: 3rem;
+    max-width: 100%;
     img {
         border-radius: $border-radius;
     }

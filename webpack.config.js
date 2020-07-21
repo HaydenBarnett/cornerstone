@@ -5,9 +5,13 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: ['./js/src/scripts.js', './css/src/main.scss'],
+  entry: {
+    scripts: './js/src/scripts.js', 
+    main: './css/src/main.scss', 
+    editor: './css/src/editor.scss'
+  },
   output: {
-    filename: './js/dist/build.min.[hash].js',
+    filename: './js/dist/[name].min.[hash].js',
     path: path.resolve(__dirname),
   },
   module: {
@@ -34,7 +38,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './css/dist/build.min.[hash].css'
+      filename: './css/dist/[name].min.[hash].css'
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['./js/dist/*','./css/dist/*']

@@ -17,10 +17,9 @@ function dequeue_jquery_migrate(&$scripts){
 // Gutenberg
 
 function custom_gutenberg_assets() {
-    $theme = wp_get_theme();
-    $theme_version = $theme['Version'];
+    $editorGlob = glob(get_template_directory() . '/css/dist/editor.min.*.css');
     wp_enqueue_style('dm-sans-font', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap', '');
-    // wp_enqueue_style('custom-gutenberg-styles', get_template_directory_uri() . '/editor-style.css', array(), $theme_version);
+    wp_enqueue_style('custom-gutenberg-styles', get_template_directory_uri() . '/css/dist/' . basename($editorGlob[0]));
 } add_action( 'enqueue_block_editor_assets', 'custom_gutenberg_assets' );
 
 
@@ -29,8 +28,8 @@ function custom_gutenberg_assets() {
 function queue_scripts() {
     $theme = wp_get_theme();
     $theme_version = $theme['Version'];
-    $cssGlob = glob(get_template_directory() . '/css/dist/build.min.*.css');
-    $jsGlob = glob(get_template_directory() . '/js/dist/build.min.*.js');
+    $cssGlob = glob(get_template_directory() . '/css/dist/main.min.*.css');
+    $jsGlob = glob(get_template_directory() . '/js/dist/scripts.min.*.js');
     wp_enqueue_style('dm-sans-font', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap', '');
     wp_enqueue_style('theme-default', get_stylesheet_uri(), array(), null);
     wp_enqueue_style('theme-main', get_template_directory_uri() . '/css/dist/' . basename($cssGlob[0]));

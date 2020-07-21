@@ -1,9 +1,11 @@
 blockquote,
-.wp-block-quote {
+.wp-block-quote,
+.wp-block-freeform.block-library-rich-text__tinymce blockquote {
     font-size: 2rem;
     line-height: 1.5em;
     margin: 3rem 0;
     padding: 0;
+    border: 0;
     color: $color-dark-grey;
     p {
         font-size: 2rem;

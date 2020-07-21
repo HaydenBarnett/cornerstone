@@ -1,6 +1,8 @@
 @import "variables";
 @import "mixins";
 
+div.editor-styles-wrapper {
+
 // Libraries
 
 @import "lib/normalize";
@@ -74,3 +76,9 @@
 // Templates
 
 // @import "templates/template-home";
+
+}
+
+// Editor
+
+@import "editor-overrides";
