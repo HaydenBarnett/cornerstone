@@ -44,33 +44,4 @@
         background-color: $color-off-white;
     }
 
-    // Elements
-
-    .title {
-        margin: $padding-md 0;
-        h1, h2 {
-            margin: 0;
-        }
-        time {
-            position: relative;
-            display: inline-block;
-            padding-left: $padding-md;
-            margin-top: $padding-sm;
-            color: $color-dark-grey;
-            font-size: $font-size-sm;
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                width: $padding-md/2;
-                border-bottom: $border-width solid $color-grey;
-            }
-        }
-    }
-
-    .content {
-        //
-    }
-    
 }

@@ -4,13 +4,7 @@
 
     <?php if (have_posts()): ?>
     	
-        <?php while (have_posts()): the_post(); ?>
-
-            <?php include locate_template('partials/sections/section-post-excerpt.php'); ?>
-
-        <?php endwhile; ?>
-
-        <?php include locate_template('partials/sections/section-pagination.php'); ?>
+        <?php include locate_template('partials/sections/section-posts.php'); ?>
 
     <?php else: ?>
 

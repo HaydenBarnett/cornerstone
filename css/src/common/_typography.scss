@@ -49,7 +49,8 @@ h5, .h5, .heading-size-5 {
 }
 
 h6, .h6, .heading-size-6 {
-    font-size: 1em;
+    font-size: 0.8em;
+    text-transform: uppercase;
 }
 
 .wp-block-freeform.block-library-rich-text__tinymce a,
@@ -84,6 +85,11 @@ optgroup,
 select,
 textarea {
     font-family: $font-family-primary;
+}
+
+time {
+    color: $color-dark-grey;
+    font-weight: 400;
 }
 
 /* --------------------------------------------------------------

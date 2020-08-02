@@ -1,0 +1,32 @@
+/* --------------------------------------------------------------
+   Card
+   -------------------------------------------------------------- */
+
+.card {
+    display: block;
+    margin: $padding-lg auto;
+    border: 0;
+    max-width: 540px;
+    .image {
+        margin-bottom: 1rem;
+        height: 20rem;
+        background-color: $color-off-white;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .title {
+        margin-bottom: 1rem;
+        h3 {
+            margin: 0.5rem 0 1rem;
+        }
+    }
+    .categories {
+        display: block;
+        margin: 0.5rem 0 0;
+    }
+    .content {
+        p {
+            font-size: $font-size-sm;
+        }
+    }
+}

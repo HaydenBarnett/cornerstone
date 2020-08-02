@@ -15,6 +15,16 @@
     }
 }
 
+.single {
+    .page-content {
+        margin-top: $padding-lg;
+        margin-bottom: $padding-lg;
+    }
+    .section-hero {
+        margin-bottom: 0;
+    }
+}
+
 .page-content,
 .wp-block {
     ul, ol {

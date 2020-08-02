@@ -5,4 +5,23 @@
 .section-hero {
     margin-bottom: $padding-sm;
     text-align: center;
+    .title {
+        margin: $padding-md 0;
+        h1, h2 {
+            margin: $padding-sm 0;
+        }
+    }
+    .categories {
+        a {
+            margin: 0 $padding-xs;
+        }
+    }
+    &.section-hero-offset-image {
+        margin-bottom: $padding-xl;
+        .image {
+            img {
+                margin-bottom: -12rem;
+            }
+        }
+    }
 }
