@@ -19,7 +19,7 @@
 }
 
 .no-select {
-	user-select: none;
+    user-select: none;
 }
 
 /* --------------------------------------------------------------
@@ -43,74 +43,73 @@
    -------------------------------------------------------------- */
 
 .has-blue-color {
-    color: $color-blue!important;
+    color: $color-blue !important;
 }
 
 .has-white-color {
-    color: $color-white!important;
+    color: $color-white !important;
 }
 
 .has-off-white-color {
-    color: $color-off-white!important;
+    color: $color-off-white !important;
 }
 
 .has-light-grey-color {
-    color: $color-light-grey!important;
+    color: $color-light-grey !important;
 }
 
 .has-grey-color {
-    color: $color-grey!important;
+    color: $color-grey !important;
 }
 
 .has-dark-grey-color {
-    color: $color-dark-grey!important;
+    color: $color-dark-grey !important;
 }
 
 .has-off-black-color {
-    color: $color-off-black!important;
+    color: $color-off-black !important;
 }
 
 .has-black-color {
-    color: $color-black!important;
+    color: $color-black !important;
 }
-
 
 // Background color
 
 .has-none-background-color {
-    background-color: transparent!important;
+    background-color: transparent !important;
 }
 
 .has-blue-background-color {
-    background-color: $color-blue!important;
+    background-color: $color-blue !important;
 }
 
 .has-white-background-color {
-    background-color: $color-white!important;
+    background-color: $color-white !important;
 }
 
 .has-off-white-background-color {
-    background-color: $color-off-white!important;
+    background-color: $color-off-white !important;
 }
 
 .has-light-grey-background-color {
-    background-color: $color-light-grey!important;
+    background-color: $color-light-grey !important;
 }
 
 .has-grey-background-color {
-    background-color: $color-grey!important;
+    background-color: $color-grey !important;
 }
 
 .has-dark-grey-background-color {
-    background-color: $color-dark-grey!important;
+    background-color: $color-dark-grey !important;
 }
 
 .has-off-black-background-color {
-    background-color: $color-off-black!important;
+    background-color: $color-off-black !important;
 }
 
 .has-black-background-color {
-    background-color: $color-black!important;
+    background-color: $color-black !important;
 }
 
 /* --------------------------------------------------------------
@@ -147,7 +146,6 @@
     width: auto;
     z-index: 100000;
 }
-
 
 /* --------------------------------------------------------------
    Margin

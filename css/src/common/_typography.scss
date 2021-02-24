@@ -2,8 +2,12 @@
    Typography
    -------------------------------------------------------------- */
 
-::-moz-selection { background: $color-grey; }
-::selection { background: $color-grey; }
+::-moz-selection {
+    background: $color-grey;
+}
+::selection {
+    background: $color-grey;
+}
 
 html {
     color: $color-off-black;
@@ -15,11 +19,11 @@ body {
     font-family: $font-family-primary;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
     color: $color-black;
     margin-top: 2em;
@@ -28,27 +32,39 @@ h6 {
     font-weight: 700;
 }
 
-h1, .h1, .heading-size-1 {
+h1,
+.h1,
+.heading-size-1 {
     font-size: 3em;
 }
 
-h2, .h2, .heading-size-2 {
+h2,
+.h2,
+.heading-size-2 {
     font-size: 2.6em;
 }
 
-h3, .h3, .heading-size-3 {
+h3,
+.h3,
+.heading-size-3 {
     font-size: 2.2em;
 }
 
-h4, .h4, .heading-size-4 {
+h4,
+.h4,
+.heading-size-4 {
     font-size: 1.8em;
 }
 
-h5, .h5, .heading-size-5 {
+h5,
+.h5,
+.heading-size-5 {
     font-size: 1.4em;
 }
 
-h6, .h6, .heading-size-6 {
+h6,
+.h6,
+.heading-size-6 {
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -59,7 +75,7 @@ a {
     text-decoration: none;
     font-weight: 700;
     border-bottom: 3px solid $color-light-grey;
-    transition: .4s ease color, .3s ease border;
+    transition: 0.4s ease color, 0.3s ease border;
     &:visited {
         color: $color-blue;
         text-decoration: none;
@@ -97,29 +113,22 @@ time {
    -------------------------------------------------------------- */
 
 @media (max-width: 1199px) {
-
 }
 
 @media (max-width: 991px) {
-    
 }
 
 @media (max-width: 767px) {
-
 }
 
 @media (max-width: 575px) {
-
 }
 
 @media (max-width: 479px) {
-
 }
 
 @media (max-width: 320px) {
-
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-
 }

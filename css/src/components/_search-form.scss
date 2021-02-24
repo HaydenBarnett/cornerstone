@@ -12,8 +12,9 @@
         border: $border-width solid transparent;
         border-radius: $border-radius;
         box-shadow: $box-shadow;
-        transition: .4s border, .4s box-shadow;
-        &:focus, &:active {
+        transition: 0.4s border, 0.4s box-shadow;
+        &:focus,
+        &:active {
             border-color: $color-light-blue;
             box-shadow: $box-shadow-hover;
         }

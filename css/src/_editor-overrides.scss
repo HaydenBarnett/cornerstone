@@ -7,7 +7,7 @@ div.editor-styles-wrapper {
     // Blocks - remove margins
 
     .acf-block-preview > div {
-        margin: 0!important;
+        margin: 0 !important;
     }
 
     // Block Yoast FAQ - always display answers
@@ -20,7 +20,7 @@ div.editor-styles-wrapper {
 .wp-block {
     max-width: $inner-width;
 }
- 
-.wp-block[data-align=wide] {
+
+.wp-block[data-align="wide"] {
     max-width: $container-width;
 }

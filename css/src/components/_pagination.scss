@@ -1,21 +1,21 @@
 .pagination {
-	.page-numbers {
-		padding: $padding-sm/2 $padding-sm;
-		font-weight: 700;
-		border: $border-width solid $color-light-grey;
-		display: inline-block;
-		border-radius: $border-radius;
-		box-shadow: $box-shadow;
-		transition: .4s all;
-		&.current {
-			box-shadow: none;
-			background-color: $color-off-white;
-			&:hover {
-				border-color: $color-light-grey;
-			}
-		}
-		&:hover {
-			border-color: $color-grey;
-		}
-	}
+    .page-numbers {
+        padding: $padding-sm/2 $padding-sm;
+        font-weight: 700;
+        border: $border-width solid $color-light-grey;
+        display: inline-block;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        transition: 0.4s all;
+        &.current {
+            box-shadow: none;
+            background-color: $color-off-white;
+            &:hover {
+                border-color: $color-light-grey;
+            }
+        }
+        &:hover {
+            border-color: $color-grey;
+        }
+    }
 }

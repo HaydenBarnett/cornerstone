@@ -21,11 +21,11 @@
         width: 25px;
         height: 2px;
         background-color: $color-off-black;
-        transition: .2s all;
+        transition: 0.2s all;
     }
 
     .bar-1 {
-        top: 5px;  
+        top: 5px;
     }
     .bar-2 {
         top: 13px;
@@ -52,5 +52,4 @@
             transform: translateY(-8px) rotate(-45deg);
         }
     }
-
 }

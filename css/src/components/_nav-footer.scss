@@ -18,14 +18,18 @@
                 padding: 28px 0px;
                 margin: 0px $padding-sm;
                 border: 0;
-                &:hover, &:active, &:focus {
+                &:hover,
+                &:active,
+                &:focus {
                     color: $color-blue;
                 }
             }
             &.current_page_item {
                 > a {
-                    color: $color-dark-grey; 
-                    &:hover, &:active, &:focus {
+                    color: $color-dark-grey;
+                    &:hover,
+                    &:active,
+                    &:focus {
                         color: $color-blue;
                     }
                 }

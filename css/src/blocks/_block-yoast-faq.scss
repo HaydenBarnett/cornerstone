@@ -1,5 +1,4 @@
 .wp-block-yoast-faq-block {
-    
 }
 
 .schema-faq-section {
@@ -60,9 +59,8 @@
         top: 0.5em;
         content: "+";
         margin-right: 5px;
-        transition: .2s ease all;
+        transition: 0.2s ease all;
     }
-
 }
 
 .schema-faq-answer {
@@ -95,6 +93,6 @@
 
 .editor-styles-wrapper {
     .schema-faq-answer {
-        display: block!important;
+        display: block !important;
     }
 }

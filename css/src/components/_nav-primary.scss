@@ -21,7 +21,9 @@
                 margin: 0 $padding-sm;
                 padding: 28px 0px;
                 border: 0;
-                &:hover, &:active, &:focus {
+                &:hover,
+                &:active,
+                &:focus {
                     color: $color-blue;
                 }
             }
@@ -32,7 +34,7 @@
             }
             &.current_page_item {
                 > a {
-                    color: $color-black;    
+                    color: $color-black;
                 }
             }
             ul {

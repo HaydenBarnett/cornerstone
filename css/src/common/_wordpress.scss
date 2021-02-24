@@ -27,7 +27,8 @@
 
 .page-content,
 .wp-block {
-    ul, ol {
+    ul,
+    ol {
         margin: 1rem auto;
         li {
             color: $color-dark-grey;
@@ -45,19 +46,16 @@ p {
 }
 
 .alignfull {
-	margin: $gutter*2 calc(50% - 50vw);
-	max-width: 100vw;
-	width: 100vw;
+    margin: $gutter * 2 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
 }
 
 .alignleft {
-    
 }
 
 .alignright {
-    
 }
 
 .aligncenter {
-    
 }

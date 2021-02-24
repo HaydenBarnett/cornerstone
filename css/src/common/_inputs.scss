@@ -11,7 +11,7 @@
         }
         .hidden_label {
             .gfield_label {
-                display: none!important;
+                display: none !important;
             }
         }
         .grecaptcha-badge {
@@ -27,17 +27,17 @@
             }
         }
         .gfield_required {
-            display: none;           
+            display: none;
         }
         .gform_validation_container {
             display: none;
         }
         li {
-            margin-left: 0!important;
-            list-style: none!important;
+            margin-left: 0 !important;
+            list-style: none !important;
             overflow: visible;
         }
-        input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
         textarea {
             font-size: 1rem;
             font-family: inherit;
@@ -48,7 +48,8 @@
             border-radius: $border-radius;
             outline: 0;
             background-color: rgba($color-light-grey, 0.2);
-            transition: .2s ease background-color, .2s ease border, .2s ease color;
+            transition: 0.2s ease background-color, 0.2s ease border,
+                0.2s ease color;
             &:hover {
                 border-color: $border-color;
             }
@@ -64,8 +65,8 @@
 .gform_wrapper {
     form {
         .gform_footer {
-            input.button, 
-            input[type=submit] {
+            input.button,
+            input[type="submit"] {
                 display: inline-block;
                 cursor: pointer;
                 border-radius: 100px;
@@ -78,7 +79,7 @@
                 transition: 0.2s ease all;
                 outline: 0;
                 border: 0;
-    
+
                 color: $color-white;
                 background-color: $color-blue;
                 &:visited {
@@ -116,7 +117,7 @@
                 color: $color-error;
             }
             .ginput_container {
-                input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), 
+                input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
                 textarea {
                     border-color: $color-error;
                 }
@@ -125,7 +126,6 @@
                 display: none;
             }
         }
-        
     }
 }
 
