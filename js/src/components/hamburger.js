@@ -1,8 +1,7 @@
 (function ($) {
-    "use strict"
+    "use strict";
 
-    $('.nav-hamburger').on('click', function() {
-        $('.nav-hamburger, .nav-mobile').toggleClass('active');
+    $(".nav-hamburger").on("click", function () {
+        $(".nav-hamburger, .nav-mobile").toggleClass("active");
     });
-
-}(jQuery));
+})(jQuery);

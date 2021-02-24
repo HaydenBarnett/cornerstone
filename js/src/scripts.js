@@ -1,1 +1,1 @@
-import './components/hamburger.js';
+import "./components/hamburger.js";
