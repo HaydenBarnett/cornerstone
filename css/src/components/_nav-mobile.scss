@@ -1,12 +1,14 @@
 .nav-mobile {
-    background-color: $color-blue;
+    background-color: $color-white;
     position: absolute;
     width: 100%;
     z-index: 1000;
     display: none;
     box-shadow: $box-shadow;
-    &.active {
-        display: block;
+    @media (max-width: 767px) {
+        &.active {
+            display: block;
+        }
     }
     ul {
         padding: 0;
@@ -17,10 +19,12 @@
             a {
                 display: block;
                 padding: $padding-sm;
-                color: $color-white;
-                border-top: $border-width solid fade($color-white, 10%);
-                &:hover, &:active, &:focus {
-                    background-color: fade($color-white, 10%);
+                color: $color-black;
+                border: 0;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: fade($color-black, 10%);
                 }
             }
         }
